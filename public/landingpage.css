@@ -26,18 +26,18 @@ a {
 }
 /* Navigation styles */
 nav {
-    padding: 1em;
+    padding:1em;
     font-size: 24px;
     background-color:#796465;
     border-bottom: 1px solid black;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
+    display: block;
     justify-content:space-between;
 }
 
 nav > a {
     color: black;
-    display: block;
+    display: flex;
     text-align: right;
 }
 
@@ -53,16 +53,19 @@ nav > a {
     font-weight: bolder;
 }
 
-.lang-button, .appointment-button{
+.lang-button, .home-button{
     border-radius: 35px;
-    background-color: #796465;
+    background-color: #702e31;
     padding: 10px;
     border: 2px solid black;
+    display: inline-block;
+    flex-direction: column;
 }
 
-.lang-text, .appointment-text{
+.lang-text, .home-text{
     font-size: 15px;
     color: white;
+    margin-bottom: 10px;
 }
 
 #buttons:hover{
