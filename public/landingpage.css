@@ -4,8 +4,7 @@
 :root {
     font-family: Arial, sans-serif;
     background-color: #F4F5F5;
-    margin: 0;
-    padding: 0;
+
 }
 
 h1 {
@@ -31,7 +30,7 @@ nav {
     background-color:#796465;
     border-bottom: 1px solid black;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    display: block;
+    display: flex;
     justify-content:space-between;
 }
 
