@@ -1,7 +1,9 @@
-
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
     font-family: Arial, sans-serif;
-    background-color: pink;
+    background-color: #F4F5F5;
     margin: 0;
     padding: 0;
 }
@@ -17,4 +19,36 @@ p {
     font-size: 18px;
     text-align: center;
     margin-top: 20px;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navigation li a:hover {
+    background-color: #45a049; /* Darker Green */
 }
