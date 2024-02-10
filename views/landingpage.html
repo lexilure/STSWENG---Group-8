@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Welcome</title>
+    <link href="https://fonts.googleapis.com/css?family=Kameron" rel="stylesheet">
+    <link rel="stylesheet" href="/public/landingpage.css">
 </head>
 <body>
     <nav>
+
         <a href="/static/login" class="text-white hover:text-black">Home</a>
-        <a href="/static/login" class="text-white hover:text-black">FAQ</a>
-        
     </nav>
 
-    <h1>Welcome to Your Website</h1>
-    <p>This is a simple navigation bar.</p>
+    <div class="welcome-container">
+        <h1 class="welcome-text">Book an appointment today!</h1>
+        <h2>Where your hair journey starts, your dream hair awaits!</h2>
+        <br><br>
+
+        <a href="/static/appointment">
+            <div class="appointment-button" id="buttons">
+                <h3 class="appointment-text" id="button-text">BOOK AN APPOINTMENT</h3>
+            </div>
+        </a>
+    </div>
+    <script async type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="/js/test_translate.js" defer></script>
 </body>
 </html>

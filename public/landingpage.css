@@ -21,34 +21,55 @@ p {
     margin-top: 20px;
 }
 
+a {
+    text-decoration:none;
+}
 /* Navigation styles */
 nav {
-    background-color: #333;
-    padding: 10px 0;
+    padding: 1em;
+    font-size: 24px;
+    background-color:#796465;
+    border-bottom: 1px solid black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content:space-between;
 }
 
-.navigation {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+nav > a {
+    color: black;
+    display: block;
+    text-align: right;
 }
 
-.navigation li {
-    display: inline;
+.welcome-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:  75px;
 }
 
-.navigation li a {
-    text-decoration: none;
-    color: #FFF;
-    padding: 10px 20px;
-    background-color: #4CAF50; /* Green */
-    border: none;
-    border-radius: 3px;
+.welcome-text{
+    font-size: 65px;
+    font-weight: bolder;
+}
+
+.lang-button, .appointment-button{
+    border-radius: 35px;
+    background-color: #796465;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.lang-text, .appointment-text{
+    font-size: 15px;
+    color: white;
+}
+
+#buttons:hover{
+    background-color: #d7b29d;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.navigation li a:hover {
-    background-color: #45a049; /* Darker Green */
+#buttons:hover #button-text{
+    color:black;
 }
