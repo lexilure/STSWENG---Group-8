@@ -1,77 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-:root {
-    font-family: Arial, sans-serif;
-    background-color: #F4F5F5;
-
+body{
+    margin: 0;
+    padding:0;
 }
-
-h1 {
-    color: #333;
+.logo {
+    text-indent: -99999999;
+    background:url(file:///C:/Users/alexa/Downloads/Padua%20Relty.png);
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px; 
 }
-
-p {
-    color: #666;
-    font-size: 18px;
+.logo img {
+    width: 200px; 
+    height: auto;
+}
+main{
+    margin: 0;
+}
+h1{
     text-align: center;
-    margin-top: 20px;
 }
+.navbar ul{
 
-a {
-    text-decoration:none;
-}
-/* Navigation styles */
-nav {
-    padding:1em;
-    font-size: 24px;
-    background-color:#796465;
-    border-bottom: 1px solid black;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content:space-between;
-}
+    list-style-type: none;
+    background-color:hsl(0, 0%, 25%);
+    padding:0;
+    margin:0;
+    overflow: hidden;
 
-nav > a {
-    color: black;
-    display: flex;
-    text-align: right;
 }
-
-.welcome-container{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top:  75px;
-}
-
-.welcome-text{
-    font-size: 65px;
-    font-weight: bolder;
-}
-
-.lang-button, .home-button{
-    border-radius: 35px;
-    background-color: #702e31;
-    padding: 10px;
-    border: 2px solid black;
-    display: inline-block;
-    flex-direction: column;
-}
-
-.lang-text, .home-text{
-    font-size: 15px;
+.navbar a{
     color: white;
-    margin-bottom: 10px;
+    text-decoration: none;
+    padding: 15px;
+    display: flex;
+    text-align: center;
 }
-
-#buttons:hover{
-    background-color: #d7b29d;
-    cursor: pointer;
+.navbar a:hover{
+    background-color: hsl(0, 0%, 10%);
 }
-
-#buttons:hover #button-text{
-    color:black;
+.navbar li{
+    float: left;
 }
