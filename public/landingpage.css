@@ -1,10 +1,22 @@
+*{
+    box-sizing:border-box;
+}
 body{
     margin: 0;
     padding:0;
+    background-image: url('../img/House-Cover-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+main{
+    margin:50;
+    padding: 10em;
+    background-color: #E7E9E7;
 }
 .logo {
     text-indent: -99999999;
-    background:url(file:///C:/Users/alexa/Downloads/Padua%20Relty.png);
     text-align: center;
     margin-top: 20px; 
 }
@@ -12,21 +24,33 @@ body{
     width: 200px; 
     height: auto;
 }
-main{
-    margin: 0;
+
+.mom {
+    text-indent: -9999px; /* Adjusted to hide text */
+    text-align: right;
 }
+
+.mom img {
+    width: 225px;
+    height: auto;
+}
+
 h1{
     text-align: center;
 }
+
+
 .navbar ul{
 
     list-style-type: none;
-    background-color:hsl(0, 0%, 25%);
+    background-color:#A2403F;
+    opacity: 0.9;
     padding:0;
     margin:0;
     overflow: hidden;
 
 }
+
 .navbar a{
     color: white;
     text-decoration: none;
@@ -35,8 +59,23 @@ h1{
     text-align: center;
 }
 .navbar a:hover{
-    background-color: hsl(0, 0%, 10%);
+    background-color: #862e2d;
 }
 .navbar li{
     float: left;
+}
+
+aside{
+
+    width: 50%;
+    float:left;
+
+
+}
+
+section{
+
+    width: 50%;
+    float:right;
+
 }
