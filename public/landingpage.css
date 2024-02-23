@@ -11,9 +11,13 @@ body{
     background-size: cover;
 }
 main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
     margin:50;
     padding: 10em;
     background-color: #E7E9E7;
+
 }
 .logo {
     text-indent: -99999999;
