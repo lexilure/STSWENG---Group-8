@@ -11,6 +11,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+
 main{
     display:flex;
    /* justify-content: center;
@@ -21,7 +22,10 @@ main{
 
 }
 /* gallery section*/
-User
+.img{
+    width: 60px;
+    height: 100px ;
+}
 .gallery {
     display: inline-block;
     border: 10px solid #E7E9E7 ; 
