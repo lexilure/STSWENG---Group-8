@@ -2,14 +2,13 @@ name: Workflow 1
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
-  test1:
+  build:
+    
     runs-on: windows-latest
 
     steps:
@@ -17,4 +16,5 @@ jobs:
         run: echo "Hello World"
       - name: Test Step (1)
         run: npm --version
-      - run: node --version
+      - name: Test Step (2)
+        run: node --version
