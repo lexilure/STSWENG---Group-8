@@ -15,3 +15,6 @@ jobs:
     steps:
       - name: Test Step
         run: echo "Hello World"
+      - name: Test Step (1)
+        run: npm --version
+      - run: node --version
