@@ -1,0 +1,17 @@
+name: Workflow 1
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test1:
+    runs-on: windows-latest
+
+    steps:
+      - name: Test Step
+        run: echo "Hello World"
