@@ -2,17 +2,23 @@ name: Workflow 1
 
 on:
   push:
-  branches:
-  -'main'
-
-  push:
-  branches:
-  -'main'
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  test1:
-  runs-on: windows-latest
+  build:
+    
+    runs-on: windows-latest
 
-  steps:
-  -name: Test Step
-    run: echo "Hello World"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Selenium IDE Runner
+        run: npm install -g selenium-side-runner
