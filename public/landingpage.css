@@ -19,6 +19,22 @@ main{
     background-color: #E7E9E7;
 
 }
+/* gallery section*/
+User
+.gallery {
+    display: inline-block;
+    border: 10px solid #E7E9E7 ; 
+    margin: 5px;
+
+}
+.gallery.description {
+    padding: 10px;
+    text-align: center; 
+}
+.gallery:hover {
+    border: 1px solid #552222; 
+}
+
 .logo {
     text-indent: -99999999;
     text-align: center;
@@ -29,15 +45,6 @@ main{
     height: auto;
 }
 
-.mom {
-    text-indent: -9999px; /* Adjusted to hide text */
-    text-align: right;
-}
-
-.mom img {
-    width: 225px;
-    height: auto;
-}
 
 h1{
     text-align: center;
@@ -69,17 +76,3 @@ h1{
     float: left;
 }
 
-aside{
-
-    width: 50%;
-    float:left;
-
-
-}
-
-section{
-
-    width: 50%;
-    float:right;
-
-}
