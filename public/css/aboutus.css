@@ -1,0 +1,8 @@
+.color-block-top {
+    background-color: rgb(51, 51, 56);
+    height: 3vh
+  }
+  .cover {
+    object-fit: cover;
+    height: 60vh;
+  }
