@@ -81,3 +81,13 @@ h1{
     float: left;
 }
 
+.custom-icon {
+    font-size: 2.5rem; /* Adjust size as needed */
+    color: #d18718; /* Your desired color */
+    padding-left: 30px;
+  }
+  .custom-card {
+    width: 90%; /* Adjust width as needed */
+    max-width: 600px; /* Adjust max width as needed */
+    margin: auto;
+  }
