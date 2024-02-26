@@ -114,4 +114,23 @@ a:hover {
     border-radius: 10px; 
     background-color: #d9d9d9;
 }
-  
+
+.custom-icon {
+    font-size: 2.5rem;
+    color: #d18718;
+    padding-left: 30px;
+  }
+  .custom-card {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .section-stats {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .row {
+    margin: auto;
+  }
