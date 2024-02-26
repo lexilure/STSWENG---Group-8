@@ -6,19 +6,19 @@
 .cover {
     text-align: center;
     object-fit: cover;
-    height: 60vh;
+    height: 50vh;
 }
 
 .cover-title {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .cover-breadcrumb {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -27,34 +27,103 @@
 .breadcrumb a,
 .breadcrumb span {
     line-height: 2.6rem;
-    /* Adjust this value as needed */
 }
 
 .cover-breadcrumb a {
     text-decoration: none;
     font-size: 1.6rem;
-    /* font size of title-a */
     font-weight: 600;
-    /* font weight of title-a */
-    color: #313131;
-    /* color of title-link a */
+    color: #a22020;
+
 }
 
 .cover-breadcrumb span {
     font-size: 1.6rem;
-    /* font size of title-a */
     font-weight: 600;
-    /* font weight of title-a */
-    color: #ffc107;
-    /* color of title-link span */
-}
+    color: #d18718;
 
-a:hover {
-    color: #a22020;
-    text-decoration: none;
 }
 
 .breadcrumb-separator {
-  font-size: 2.6rem; /* Same size as breadcrumb-a and breadcrumb-span */
-  color: black; /* Black color */
+    font-size: 2.6rem;
+    color: black;
 }
+
+.body-header {
+    color: #000000;
+    text-align: left;
+    font-size: 2.6rem;
+    letter-spacing: -0.031rem;
+    width: 30.375rem;
+}
+
+.body-subheader {
+    color: #000000;
+    text-align: left;
+    font-size: 2rem;
+    letter-spacing: -0.031rem;
+    width: 15rem;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.body-text-wrapped {
+    color: #000000;
+    margin-left: 40px;
+    width: 25rem;
+}
+
+.body-text-unwrapped {
+    color: #000000;
+    margin-left: 40px;
+    width: 40rem;
+}
+
+.body-image {
+    height: 700px;
+    width: 700px;
+    border-radius: 10px;
+    left: 893px;
+    top: 574px;
+    margin-top: -40px;
+    margin-left: -250px;
+}
+
+.body-content {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 150px;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+.square-overlap{
+    width: 700px; 
+    height: 700px;
+    border-radius: 10px; 
+    background-color: #d9d9d9;
+}
+
+.custom-icon {
+    font-size: 2.5rem;
+    color: #d18718;
+    padding-left: 30px;
+  }
+  .custom-card {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .section-stats {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .row {
+    margin: auto;
+  }
