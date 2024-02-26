@@ -27,17 +27,14 @@
 .breadcrumb a,
 .breadcrumb span {
     line-height: 2.6rem;
-    /* Adjust this value as needed */
 }
 
 .cover-breadcrumb a {
     text-decoration: none;
     font-size: 1.6rem;
-    /* font size of title-a */
     font-weight: 600;
-    /* font weight of title-a */
-    color: #313131;
-    /* color of title-link a */
+    color: #a22020;
+
 }
 
 .cover-breadcrumb span {
@@ -45,11 +42,6 @@
     font-weight: 600;
     color: #d18718;
 
-}
-
-a:hover {
-    color: #a22020;
-    text-decoration: none;
 }
 
 .breadcrumb-separator {
