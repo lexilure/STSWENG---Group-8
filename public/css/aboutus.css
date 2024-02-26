@@ -1,0 +1,60 @@
+.color-block-top {
+    background-color: rgb(51, 51, 56);
+    height: 3vh
+}
+
+.cover {
+    text-align: center;
+    object-fit: cover;
+    height: 60vh;
+}
+
+.cover-title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cover-breadcrumb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.breadcrumb a,
+.breadcrumb span {
+    line-height: 2.6rem;
+    /* Adjust this value as needed */
+}
+
+.cover-breadcrumb a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    /* font size of title-a */
+    font-weight: 600;
+    /* font weight of title-a */
+    color: #313131;
+    /* color of title-link a */
+}
+
+.cover-breadcrumb span {
+    font-size: 1.6rem;
+    /* font size of title-a */
+    font-weight: 600;
+    /* font weight of title-a */
+    color: #ffc107;
+    /* color of title-link span */
+}
+
+a:hover {
+    color: #a22020;
+    text-decoration: none;
+}
+
+.breadcrumb-separator {
+  font-size: 2.6rem; /* Same size as breadcrumb-a and breadcrumb-span */
+  color: black; /* Black color */
+}
