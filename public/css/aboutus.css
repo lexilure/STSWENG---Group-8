@@ -100,6 +100,7 @@ a:hover {
 .body-content {
     display: flex;
     align-items: flex-start;
+    margin-left: 150px;
   }
   
   .text-container {
