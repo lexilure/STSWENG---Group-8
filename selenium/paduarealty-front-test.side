@@ -98,25 +98,17 @@
     }, {
       "id": "0c77f7bf-6be4-46f9-a6a8-f71923dce26f",
       "comment": "",
-      "command": "assert",
-      "target": "storedVars['currentPage'] == '/views/login.html'",
+      "command": "executeScript",
+      "target": "return window.location.href",
       "targets": [],
-      "value": ""
+      "value": "pageurl"
     }, {
-      "id": "944c0576-1128-4614-849f-ba08b7123c55",
+      "id": "47e36867-228b-49d7-bfe8-06dcc68b08c1",
       "comment": "",
-      "command": "click",
-      "target": "linkText=Home",
-      "targets": [
-        ["linkText=Home", "linkText"],
-        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
-        ["xpath=//div[@id='navbarDefault']/ul/li/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, 'index.html')])[2]", "xpath:href"],
-        ["xpath=//li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
-      ],
-      "value": ""
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://127.0.0.1:5501/views/contact.html"
     }]
   }],
   "suites": [{
