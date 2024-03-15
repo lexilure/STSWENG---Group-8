@@ -2228,3 +2228,23 @@ footer .copyright-footer {
 footer .credits {
   font-size: 14px;
 }
+
+/*Custom Form*/
+/* New styles for the form */
+.custom-form {
+  background: linear-gradient(to bottom, #c64f4f, #c64f4f); /* Gradient background from light to dark red */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Add some padding */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  color: white; /* Text color */
+}
+
+/* Adjusting button styles */
+.custom-form .btn {
+  border-radius: 20px; /* Adjusting button border-radius */
+}
+
+/* Adjusting label color */
+.custom-form .form-label {
+  color: white; /* Set label color to white */
+}
