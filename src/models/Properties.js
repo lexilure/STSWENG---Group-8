@@ -33,3 +33,5 @@ const propertySchema = new mongoose.Schema({
         type: Buffer,
     }
 })
+
+export default mongoose.model("Owner", ownerSchema);
