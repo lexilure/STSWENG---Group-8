@@ -1,17 +1,24 @@
 {
-  "name": "stsweng---group-8",
+  "name": "stsweng_group8",
   "version": "1.0.0",
-  "description": "This is the STSWENG-S14 repository for Group 8:\r ASPECTO, Don Laude A.;\r DONATO, Adriel Joseph Y.;\r ESTANOL, Miguel Francis M.;\r EXCONDE, Isiah Reuben C.;\r LEONIDA, Patrick Josh C.;\r PADUA, Alexandra G.;\r SRIVASTAVA, Naman C.;\r ZUNIGA, John Isaac J.",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "bootstrap": "^5.3.3",
-    "jquery": "^3.7.1",
-    "popper.js": "^1.16.1",
-    "tailwindcss": "^3.4.1"
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "express-handlebars": "^7.1.2",
+    "handlebars": "^4.7.8",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.2.2",
+    "node": "^21.7.1",
+    "nodemon": "^3.1.0"
   }
 }
