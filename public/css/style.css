@@ -2168,3 +2168,69 @@ footer .copyright-footer {
 footer .credits {
   font-size: 14px;
 }
+
+/* Style for the CRUD section */
+.CRUD {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+/* Style for the container within the CRUD section */
+.CRUD .container {
+  max-width: 900px; /* Maximum width for the container */
+  margin: auto; /* Center the container */
+}
+
+/* Style for the form within the container */
+.CRUD form {
+  background-color: #fff; /* White background for the form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for the form */
+}
+
+/* Style for form labels */
+.CRUD form label {
+  font-weight: bold;
+}
+
+/* Style for form inputs */
+.CRUD form input[type="text"],
+.CRUD form input[type="number"],
+.CRUD form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Style for the submit button */
+.CRUD form button[type="submit"] {
+  background-color: #a22020; /* Blue submit button */
+  color: #fff; /* Text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+.CRUD form button[type="submit"]:hover {
+  background-color: #673232; /* Darker blue on hover */
+}
+
+/* Responsive styling for the image */
+.CRUD img {
+  max-width: 100%; /* Ensure image does not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .CRUD .container {
+    padding: 0 10px; /* Reduce container padding */
+  }
+}
