@@ -2175,7 +2175,8 @@ footer .credits {
   display: flex; /* Use flexbox to center the container vertically and horizontally */
   justify-content: center; /* Center the container horizontally */
   align-items: center;
-  margin-top: 300px; /* Center the container vertically */
+  margin-top: 250px;
+  margin-bottom: 100px; /* Center the container vertically */
   height: 100vh; /* Make the CRUD section fill the entire viewport height */
 }
 
