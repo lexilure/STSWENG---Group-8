@@ -133,12 +133,23 @@
             <input type="number" class="form-control" id="propertyPrice" name="propertyPrice">
           </div>
           <!-- Status (Sold or Not Sold) -->
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="propertyStatus" name="propertyStatus">
-            <label class="form-check-label" for="propertyStatus">Status (Sold)</label>
-          </div>
-        </fieldset>
-      </div>
+<div class="form-group">
+    <label>Property Status:</label><br>
+    <div class="form-check">
+        <input type="radio" class="form-check-input" id="statusSold" name="propertyStatus" value="Sold">
+        <label class="form-check-label" for="statusSold">Sold</label>
+    </div>
+    <div class="form-check">
+        <input type="radio" class="form-check-input" id="statusForSale" name="propertyStatus" value="For Sale">
+        <label class="form-check-label" for="statusForSale">For Sale</label>
+    </div>
+    <div class="form-check">
+        <input type="radio" class="form-check-input" id="statusRent" name="propertyStatus" value="Rent">
+        <label class="form-check-label" for="statusRent">Rent</label>
+    </div>
+</div>
+
+
       <!-- Property Details (Right Side) -->
       <div class="col-md-6">
         <fieldset>
