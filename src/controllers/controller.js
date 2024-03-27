@@ -29,8 +29,8 @@ exports.menu = (req, res) =>{
     res.render('menu');
 }
 
-exports.admin_properties = (req, res) =>{
-    res.render('admin-property');
+exports.admin_properties= (req, res) =>{
+    res.render('admin-properties');
 }
 
 exports.admin_inquiries = (req, res) =>{
