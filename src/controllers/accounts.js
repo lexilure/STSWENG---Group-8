@@ -1,10 +1,8 @@
 var bcrypt = require('bcryptjs');
 const Account = require('../models/Account')
-const express = require('express');
-const router = express.Router();
 
 // Register an account
-router.post('/register', async (req, res) => {
+export const register = async (req, res) => {
     const { username, password } = req.body;
 
     if (!username || !password) {
@@ -28,10 +26,10 @@ router.post('/register', async (req, res) => {
     } catch (error) {
         res.status(400).send({ error: "Registration failed", details: error.message }); 
     }
-});
+}
 
 // Login an account
-router.get('/login', async (req, res) => {
+export const login = async (req, res) => {
     try {
         const user = await Account.findOne({username: req.body.username})
         if (!user) return next(createError(400, "Incorrect username or password"))
@@ -42,10 +40,11 @@ router.get('/login', async (req, res) => {
     } catch (error) {
         res.status(400).send({ error: "Login failed", details: error.message});
     }
-})
+}
 
-// Get all properties
-router.get('/getallaccounts', async (req, res) => {
+
+// Get all accounts
+export const getAllAccounts = async (req, res) => {
     try {
         const accounts = await Account.find().lean().exec();
 
@@ -58,16 +57,16 @@ router.get('/getallaccounts', async (req, res) => {
     } catch (e) {
         res.status(500).send({error: "Fetch Accounts failed", details: e.message});
     }
-});
+}
+
+
 
 // Delete an account
-router.post('/deleteaccount', async (req, res) => {
+export const deleteAccount = async (req, res) => {
     const status = await Account.deleteOne({name: req.body.username})
     if (!status) {
         res.status(400).send("Error occurred during deleting");
     } else {
         res.status(200).send("Account Deleted");
     }
-})
-
-module.exports = router;
+}
