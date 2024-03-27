@@ -81,14 +81,57 @@
 <!-- CRUD Section -->
 <section class="CRUD">
   <div class="crud-container">
+<!-- Form -->
+<div class="col-md-20">
+  <form>
+        <div class="row">
+          <!-- Container for Upload Image -->
+          <div class="col-md-20">
+            <div class="upload-image-container d-flex justify-content-center align-items-center">
+              <!-- Your upload image container content here -->
+            </div>
+          </div>
+          <!-- Picture (Image Upload Button) -->
+          <div class="col-md-20">
+            <div class="image-upload d-flex justify-content-center align-items-center">
+              <label for="imageUpload" class="btn btn-primary">
+                Upload Image
+                <input type="file" id="imageUpload" accept="image/*" style="display:none;">
+              </label>
+              <img id="previewImage" src="#" alt="Uploaded Image" style="display:none;">
+            </div>
+          </div>
     <div class="row">
-      <!-- Picture -->
+      <!-- Property Information (Left Side) -->
       <div class="col-md-6">
-        <img src="path_to_your_image.jpg" class="img-fluid" alt="Property Image">
+        <fieldset>
+          <legend>Property Information</legend>
+          <!-- Name -->
+          <div class="form-group">
+            <label for="propertyName">Name:</label>
+            <input type="text" class="form-control" id="propertyName" name="propertyName">
+          </div>
+          <!-- Address -->
+          <div class="form-group">
+            <label for="propertyAddress">Address:</label>
+            <input type="text" class="form-control" id="propertyAddress" name="propertyAddress">
+          </div>
+          <!-- Price -->
+          <div class="form-group">
+            <label for="propertyPrice">Price:</label>
+            <input type="number" class="form-control" id="propertyPrice" name="propertyPrice">
+          </div>
+          <!-- Status (Sold or Not Sold) -->
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="propertyStatus" name="propertyStatus">
+            <label class="form-check-label" for="propertyStatus">Status (Sold)</label>
+          </div>
+        </fieldset>
       </div>
-      <!-- Form -->
+      <!-- Property Details (Right Side) -->
       <div class="col-md-6">
-        <form>
+        <fieldset>
+          <legend>Property Details</legend>
           <!-- Lot Size -->
           <div class="form-group">
             <label for="lotSize">Lot Size:</label>
@@ -114,13 +157,13 @@
             <label for="additionalFeatures">Additional Features:</label>
             <textarea class="form-control" id="additionalFeatures" name="additionalFeatures" rows="4"></textarea>
           </div>
-          <!-- Submit Button -->
-          <button type="submit" class="btn btn-primary">post</button>
-        </form>
+        </fieldset>
       </div>
     </div>
-  </div>
-</section>
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Post</button>
+  </form>
+</div>
 
 
 

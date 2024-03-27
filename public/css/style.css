@@ -2170,13 +2170,12 @@ footer .credits {
 }
 
 /* Style for the CRUD section */
-/* Style for the CRUD section */
 .CRUD {
   padding: 10px;
-  background-color: #943a3a; /* Light gray background */
   display: flex; /* Use flexbox to center the container vertically and horizontally */
   justify-content: center; /* Center the container horizontally */
-  align-items: center; /* Center the container vertically */
+  align-items: center;
+  margin-top: 300px; /* Center the container vertically */
   height: 100vh; /* Make the CRUD section fill the entire viewport height */
 }
 
