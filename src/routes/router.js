@@ -29,4 +29,6 @@ router.get('/admin-properties', controller.admin_properties)
 // Admin Inquiries CRUD Page
 router.get('/admin-inquiries', controller.admin_inquiries)
 
+router.get('/adminCRUD', controller.adminCRUD)
+
 module.exports = router;

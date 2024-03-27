@@ -2172,13 +2172,17 @@ footer .credits {
 /* Style for the CRUD section */
 .CRUD {
   padding: 20px;
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: #943a3a; /* Light gray background */
+  display: flex; /* Use flexbox to center the container vertically */
+  justify-content: center; /* Center the container horizontally */
+  align-items: center; /* Center the container vertically */
+  height: 100vh; /* Make the CRUD section fill the entire viewport height */
 }
 
 /* Style for the container within the CRUD section */
 .CRUD .container {
-  max-width: 900px; /* Maximum width for the container */
-  margin: auto; /* Center the container */
+  max-width: 10000px; /* Maximum width for the container */
+  margin: auto; /* Center the container horizontally */
 }
 
 /* Style for the form within the container */
@@ -2233,4 +2237,9 @@ footer .credits {
   .CRUD .container {
     padding: 0 10px; /* Reduce container padding */
   }
+}
+
+/* Additional styles for the CRUD container */
+.crud-container {
+  margin-top: 50px; /* Add space above the container */
 }

@@ -14,6 +14,9 @@ exports.property = (req, res) =>{
     res.render('property');
 }
 
+
+
+
 exports.service = (req, res) =>{
     res.render('service');
 }
@@ -32,5 +35,9 @@ exports.admin_properties = (req, res) =>{
 
 exports.admin_inquiries = (req, res) =>{
     res.render('admin-inquiries');
+}
+
+exports.adminCRUD = (req, res) =>{
+    res.render('adminCRUD');
 }
 
