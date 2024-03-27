@@ -1,14 +1,12 @@
 name: Workflow 1
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
+  push:
     branches: [ "main" ]
 
 jobs:
   build:
-    
     runs-on: windows-latest
 
     steps:
@@ -22,3 +20,10 @@ jobs:
 
       - name: Install Selenium IDE Runner
         run: npm install -g selenium-side-runner
+
+      - name: Deploy to Render
+        if: github.ref == 'refs/heads/main'
+        env:
+          deploy_url: https://api.render.com/deploy/srv-co19ku8l6cac73cqdnkg?key=Ac4g_NCprMc
+        run: |
+          curl "$deploy_url"
