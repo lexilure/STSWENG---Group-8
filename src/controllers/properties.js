@@ -12,7 +12,7 @@ router.post('/addproperty', async (req, res) => {
         await property.save();
         res.status(201).send(property);
     } catch (error) {
-        res.status(400).send(error);
+        res.status(500).send(error);
     }
 });
 
@@ -45,7 +45,7 @@ router.post('/updateproperties', async (req, res) =>{
     try {
         const property = await Properties.findOneAndUpdate({name: name}, {type: type, area:area, beds:beds, baths:baths, garages:garages, description:description}, {
             new: true
-        })
+        }).lean().exec()
         res.status(200).send(property)
     } catch (e) {
         res.status(400).send(e);
@@ -55,11 +55,11 @@ router.post('/updateproperties', async (req, res) =>{
 
 // Delete a property (might need the property name)
 router.post('/deleteproperty', async (req, res) => {
-    const status = await Properties.deleteOne({name: req.body.name})
+    const status = await Properties.deleteOne({ name: req.body.name })
     if (!status) {
-        res.status(400).send("Error occurred during deleting");
+        res.status(500).send("Error occurred during deletion");
     } else {
-        res.status(200).send("Property Deleted");
+        res.status(200).send("Property deleted.");
     }
 })
 
