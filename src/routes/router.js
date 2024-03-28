@@ -14,8 +14,17 @@ router.get('/contact', controller.contact)
 // Property Page
 router.get('/properties', controller.property)
 
+// Propertydetails Page
+router.get('/propertydetails', controller.propertydetails)
+
 // Services Page
 router.get('/services', controller.service)
+
+// Agents Page
+router.get('/agents', controller.agents)
+
+// Admin adding Agents Page
+router.get('/adminAgent', controller.adminAgent)
 
 // Login Page
 router.get('/admin-login', controller.login)

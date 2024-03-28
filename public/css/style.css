@@ -2256,3 +2256,16 @@ footer .credits {
 .crud-container {
   margin-top: 50px; /* Add space above the container */
 }
+
+.image-container {
+  width: 200%;
+  margin-top: 250px;
+  height: 300px; /* Set the desired height for the image container */
+  overflow: hidden;
+}
+
+.uploaded-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}

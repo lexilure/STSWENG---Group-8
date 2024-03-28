@@ -14,8 +14,16 @@ exports.property = (req, res) =>{
     res.render('property');
 }
 
+exports.propertydetails = (req, res) =>{
+    res.render('propertydetails');
+}
 
-
+exports.agents = (req, res) =>{
+    res.render('agents');
+}
+exports.adminAgent = (req, res) =>{
+    res.render('adminAgent');
+}
 
 exports.service = (req, res) =>{
     res.render('service');

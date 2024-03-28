@@ -93,7 +93,6 @@
             </div>
           </div>
 
-
           <!-- Picture (Image Upload Button) -->
           <div class="col-md-20">
             <div class="image-upload d-flex justify-content-center align-items-center">
@@ -104,86 +103,49 @@
               <img id="previewImage" src="#" alt="Uploaded Image" style="display:none;">
             </div>
           </div>
-    <div class="row">
-      <!-- Property Information (Left Side) -->
+      <!-- Agent Information -->
       <div class="col-md-6">
         <fieldset>
-          <legend>Property Information</legend>
+          <legend>Agent Information</legend>
           <!-- Name -->
           <div class="form-group">
-            <label for="propertyName">Name:</label>
-            <input type="text" class="form-control" id="propertyName" name="propertyName">
+            <label for="agentName">Name:</label>
+            <input type="text" class="form-control" id="agentName" name="agentName">
+          </div>
+          <!-- Email -->
+          <div class="form-group">
+            <label for="agentEmail">Email:</label>
+            <input type="email" class="form-control" id="agentEmail" name="agentEmail">
+          </div>
+          <!-- Education -->
+          <div class="form-group">
+            <label for="agentEducation">Education:</label>
+            <input type="text" class="form-control" id="agentEducation" name="agentEducation">
+          </div>
+          <!-- FB -->
+          <div class="form-group">
+            <label for="agentFB">Facebook link:</label>
+            <input type="text" class="form-control" id="agentFB" name="agentFB">
+          </div>
+          <!-- X -->
+          <div class="form-group">
+            <label for="agentX">X link:</label>
+            <input type="text" class="form-control" id="agentX" name="agentX">
+          </div>
+          <!-- Instagram -->
+          <div class="form-group">
+            <label for="agentInstagram">Instagram link:</label>
+            <input type="text" class="form-control" id="agentInstagram" name="agentInstagram">
+          </div>
+          <!-- LinkedIn -->
+          <div class="form-group">
+            <label for="agentLinkedIn">LinkedIn link:</label>
+            <input type="text" class="form-control" id="agentLinkedIn" name="agentLinkedIn">
           </div>
 
-            <div class="form-group">
-            <label for="propertyArchipelago">Archipelago:</label>
-                <select class="form-control" id="propertyArchipelago" name="propertyArchipelago">
-                    <option value="Luzon">Luzon</option>
-                    <option value="Visayas">Visayas</option>
-                    <option value="Mindanao">Mindanao</option>
-    </select>
-</div>
-          </div>
-          <!-- Address -->
-
-          <div class="form-group">
-            <label for="propertyAddress">Address:</label>
-            <input type="text" class="form-control" id="propertyAddress" name="propertyAddress">
-          </div>
-          <!-- Price -->
-          <div class="form-group">
-            <label for="propertyPrice">Price:</label>
-            <input type="number" class="form-control" id="propertyPrice" name="propertyPrice">
-          </div>
-          <!-- Status (Sold or Not Sold) -->
-<div class="form-group">
-    <label>Property Status:</label><br>
-    <div class="form-check">
-        <input type="radio" class="form-check-input" id="statusSold" name="propertyStatus" value="Sold">
-        <label class="form-check-label" for="statusSold">Sold</label>
-    </div>
-    <div class="form-check">
-        <input type="radio" class="form-check-input" id="statusForSale" name="propertyStatus" value="For Sale">
-        <label class="form-check-label" for="statusForSale">For Sale</label>
-    </div>
-    <div class="form-check">
-        <input type="radio" class="form-check-input" id="statusRent" name="propertyStatus" value="Rent">
-        <label class="form-check-label" for="statusRent">Rent</label>
-    </div>
-</div>
 
 
-      <!-- Property Details (Right Side) -->
-      <div class="col-md-6">
-        <fieldset>
-          <legend>Property Details</legend>
-          <!-- Lot Size -->
-          <div class="form-group">
-            <label for="lotSize">Lot Size:</label>
-            <input type="text" class="form-control" id="lotSize" name="lotSize">
-          </div>
-          <!-- Floor Size -->
-          <div class="form-group">
-            <label for="floorSize">Floor Size:</label>
-            <input type="text" class="form-control" id="floorSize" name="floorSize">
-          </div>
-          <!-- Number of Floors -->
-          <div class="form-group">
-            <label for="numFloors">Number of Floors:</label>
-            <input type="number" class="form-control" id="numFloors" name="numFloors">
-          </div>
-          <!-- Number of Rooms -->
-          <div class="form-group">
-            <label for="numRooms">Number of Rooms:</label>
-            <input type="number" class="form-control" id="numRooms" name="numRooms">
-          </div>
-          <!-- Additional Features -->
-          <div class="form-group">
-            <label for="additionalFeatures">Additional Features:</label>
-            <textarea class="form-control" id="additionalFeatures" name="additionalFeatures" rows="4"></textarea>
-          </div>
-        </fieldset>
-      </div>
+      
     </div>
     <!-- Submit Button -->
     <button type="submit" class="btn btn-primary">Post</button>
