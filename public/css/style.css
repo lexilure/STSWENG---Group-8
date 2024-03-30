@@ -2269,3 +2269,17 @@ footer .credits {
   max-height: 100%;
   display: block;
 }
+
+.view-button,
+.edit-button,
+.delete-button {
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove borders */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.view-button:hover,
+.edit-button:hover,
+.delete-button:hover {
+  color: red; /* Change icon color to red on hover */
+}
