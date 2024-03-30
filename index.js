@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 
 // Middleware for parsing JSON and URL-encoded request bodies
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Static Files
