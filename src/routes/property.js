@@ -29,6 +29,7 @@ property.post('/add', upload.single('imageUpload'), async function (req, res) {
 
     const { propertyName, propertyArchipelago, propertyAddress, propertyPrice, propertyStatus, lotSize, floorSize, numFloors, numRooms, additionalFeatures } = req.body;
     if (!propertyName || !propertyArchipelago || !propertyAddress || !propertyPrice || !propertyStatus || !lotSize || !floorSize || !numFloors || !numRooms || !additionalFeatures) {
+        console.log("here");
         res.redirect('/admin/properties/add');
         return res.status(400).send('Please provide the necessary information.');
     }
