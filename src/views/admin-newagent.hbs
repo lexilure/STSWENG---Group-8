@@ -1,0 +1,239 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Padua Realty</title>
+    <meta content name="description" />
+    <meta content name="keywords" />
+
+    <!-- Favicons -->
+    <link href="/img/padua-realty-logo-2.png" rel="icon" />
+    <link href="/img/padua-realty-logo-2.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+      rel="stylesheet" />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="/vendor/animate.css/animate.min.css"
+      rel="stylesheet" />
+    <link
+      href="/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet" />
+    <link
+      href="/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/aboutus.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: EstateAgency
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+    <!-- ======= Header/Navbar ======= -->
+    <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand text-brand" href="/admin-menu"><img
+            src="/img/padua-realty-logo.png"
+            style="width: 100px; height: 100px;"></a>
+
+        <div class="justify-content-center" id="navbarDefault">
+          <ul class="navbar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link " href="/admin/">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="/admin/users">Users</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="/admin/properties">Properties</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="/admin/inquiries">Inquiries</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="/admin/agents">Agents</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="/admin/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav><!-- End Header/Navbar -->
+    <!-- CRUD Section -->
+    <main id="main">
+      <div class="col-md-20" style="margin-bottom: 400px;">
+        <section class="CRUD">
+          <div class="crud-container">
+            <!-- Form -->
+            <div class="col-md-20">
+              <form enctype="multipart/form-data" method="POST" action="/admin/agents/add" novalidate>
+                <!-- Container for Upload Image -->
+                <div class="col-md-12 d-flex justify-content-center">
+                  <div
+                    class="upload-image-container d-flex justify-content-center align-items-center">
+                    <div class="image-container">
+                      <img id="previewImage" src="#" alt="Uploaded Image"
+                        class="uploaded-image">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Picture (Image Upload Button) -->
+                <div class="col-md-20">
+                  <div
+                    class="image-upload d-flex justify-content-center align-items-center">
+                    <label for="imageUpload" class="btn btn-primary">
+                      Upload Image
+                      <input type="file" id="imageUpload" name="imageUpload" accept="image/*" style="display:none;">
+                    </label>
+                    <img id="previewImage" src="#" alt="Uploaded Image"
+                      style="display:none;">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Agent Information -->
+                  <div class="col-md-6">
+                    <fieldset>
+                      <legend>Agent Information</legend>
+                      <!-- Name -->
+                      <div class="form-group">
+                        <label for="agentName">Name:</label>
+                        <input type="text" class="form-control" id="agentName"
+                          name="agentName">
+                      </div>
+                      <!-- Email -->
+                      <div class="form-group">
+                        <label for="agentEmail">Email:</label>
+                        <input type="email" class="form-control" id="agentEmail"
+                          name="agentEmail">
+                      </div>
+                      <!-- Education -->
+                      <div class="form-group">
+                        <label for="agentEducation">Education:</label>
+                        <input type="text" class="form-control"
+                          id="agentEducation" name="agentEducation">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <fieldset>
+                        <legend>Agent Socials</legend>
+                        <!-- FB -->
+                        <div class="form-group">
+                          <label for="agentFB">Facebook link:</label>
+                          <input type="text" class="form-control" id="agentFB"
+                            name="agentFB">
+                        </div>
+                        <!-- X -->
+                        <div class="form-group">
+                          <label for="agentX">X link:</label>
+                          <input type="text" class="form-control" id="agentX"
+                            name="agentX">
+                        </div>
+                        <!-- Instagram -->
+                        <div class="form-group">
+                          <label for="agentInstagram">Instagram link:</label>
+                          <input type="text" class="form-control"
+                            id="agentInstagram" name="agentInstagram">
+                        </div>
+                        <!-- LinkedIn -->
+                        <div class="form-group">
+                          <label for="agentLinkedIn">LinkedIn link:</label>
+                          <input type="text" class="form-control"
+                            id="agentLinkedIn" name="agentLinkedIn">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="text-center mt-4">
+                      <button type="submit"
+                        class="btn btn-primary">Add</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </main>
+
+            <!-- ======= Footer ======= -->
+            <section class="section-footer">
+              <div class="container">
+                <div class="row"></div>
+              </div>
+            </section>
+            <footer>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="copyright-footer">
+                      <p class="copyright color-text-a">
+                        &copy; Copyright
+                        <span class="color-a">PaduaRealty</span> All Rights
+                        Reserved.
+                      </p>
+                    </div>
+                    <div class="credits">
+                      <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
+            -->
+                      Designed by <a href>2324STSSWENGS14</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+            <!-- End  Footer -->
+
+            <div id="preloader"></div>
+            <a
+              href="#"
+              class="back-to-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
+
+            <!-- Vendor JS Files -->
+            <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="/vendor/swiper/swiper-bundle.min.js"></script>
+            <script src="/vendor/php-email-form/validate.js"></script>
+
+            <!-- Template Main JS File -->
+            <script src="/js/main.js"></script>
+            <script>
+            document.getElementById('imageUpload').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onloadend = function() {
+                        document.getElementById('previewImage').src = reader.result;
+                        document.getElementById('previewImage').style.display = 'block';
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+            </script>
+          </body>
+        </html>

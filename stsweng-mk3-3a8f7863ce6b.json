@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "stsweng-mk3",
+  "private_key_id": "3a8f7863ce6bda969f44373e53aea8d87551138e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCvY3mUEM+H/yf0\nB+Jx2zNpP+3NiDLBzzHUNQgbNDo+VGUuoZWk4iYZzf1o8aVF7KI7GSJUN6t+EvGe\nUYTB1yb73p2ymjjbFANLhBr2ewyg8PAnTjyf5R+EVrEIHc70bgoiSNDI1eLDrIF2\nbX0lGeq4WVdHLxY+PCGMCTL8QCoFjHL5EnCPvRHlIqSxP0efFWP13fvUYYczqqJe\npRuigdeDAErVRRuRKcVDQtYeyWHr1hTFyVMn842v+sWGFP6lsxhTJTOTdUfNIHuL\nxvlqrzZG/IlQm10C/BOb6IJnsNyII6nVArfaIQs7lwt+ZqunPdDuVHbAe/fMRVyY\nzfadJoFxAgMBAAECggEAA9OpEH6+AUYWaYfuT2GPxKhhLsadvhmGyUFMXbswP4to\nw/fas5GlCkbMR6J1vENk3JXyDo6pABpENnOpyjvz5qateXsaQ5RADsE0mgB50eon\n50elx+LAYwtFyuF+a9ozZoE0H9AXTE5it1vwt6MSE/cl3rb+wBlgrWhG+hBUimRR\nBhtqqc1j6awhq6xnv2Tp9VbTtclwJ8ulIlgNjBnl/etWE4W3X7oPkFcBFxLuZcvx\nfn6/sTYHBn9xhtgTa4q1l/QQtqBwJSTIOy54ZsA142uSlU4NMzbBJEH3AUt61RF5\nPAJUUoXzVJ7DnzBBTaQnufjg4MMA8IGijfvBmo1r1QKBgQDUTQcJCczwuosknuaB\nTFczAqXTncPkig9cHb2OkjU5AxRjDejA5Sje6zbJxulHAQPcLykvcR+T+tom9WuW\nn/slf+RPw3DJTDkHq70/Sl9NCM7EyiyqlAjIFMtKcStKIWFibvrRriSLTqSHln5O\nQte9gy39yiCcmTGcBYmHbogdvQKBgQDTfWRJqsEa+EJiDo5Dpr2OIhmrO2DSO6Xe\nFqgIovD3pu96T56mDXNl+Oruh7m+pEJbPb1iyKD2yzdMOUcwgLkPpXTr0QdfYgan\nExHHAyxgSl5a5OYbd0Y6eShlhg8/d6YphaK5pbPuKrZxsHwnPLKrY88txcyLxtnO\n4FGWDmqLxQKBgGtXRuda/TP6HcA2V3Wok65G+HE2o4U6COoaX21mn2JkHDq5HaXq\nN+/+HYWH/QrZiIobjkdeewjnHMX18KAH44PiVh2+Q5iD4ZHvU5BcmjLo8SKu1kao\n8oe3e9H3xluE5ShP1KGP2wpUiPvFK7eGNG6tlONs/3AuRNcONas0R75BAoGBAJfU\nGFBOls1O1xFgU7+7j6/fSUBFo4+qJLzY1Q9GMuoH3TqYuFOLqoHVfot5wt5bPAwW\nucSWNgCXCX7eS/5FGxZheRvmd32BeTcumH+gBpamLTDhzVSAf1lxK5Ae+wlcU1zR\nxG20yQS9gzcBNVBR4g7q24yHyP275xf+sHOiq9jlAoGBAJ0VGax40EwOUNpru8ND\nxBEtOL0vx1JB/KfoBfruZurN1mvba7sHuZ2ZXsv95hjgaJk9C0+8gTYC2te/kF29\n1JePAG7JMv+aB09QjcfVMYST1z+eWEjTcu/MxIxKhh9cxcqhczSXojSak50B41L3\nFciStQ3aU8bpJzTx0D10E4FE\n-----END PRIVATE KEY-----\n",
+  "client_email": "stswengserviceaccount@stsweng-mk3.iam.gserviceaccount.com",
+  "client_id": "106811068281647619731",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/stswengserviceaccount%40stsweng-mk3.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

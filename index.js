@@ -3,11 +3,25 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const connect = require('./src/models/db.js');
 
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+
 dotenv.config();
 const app = express();
 
+app.use(cookieParser());
+app.use(session({
+    key: 'user_sid',
+    secret: 'somerandonstuffs',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        expires: 600000
+    }
+}));
+
 // Middleware for parsing JSON and URL-encoded request bodies
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Static Files
@@ -19,15 +33,40 @@ app.engine("hbs", exphbs.engine({
     helpers: {
         formatDate: function(date) {
             return `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
+        },
+        eq: function(a, b) {
+            return a === b;
         }
     }
 }));
 app.set('view engine', 'hbs');
 app.set('views', 'src/views');
 
-//router
-const router = require('./src/routes/router.js');
-app.use('/', router);
+//user views router
+const frontend = require('./src/routes/frontend.js');
+app.use('/', frontend);
+
+// admin views router
+
+//general admin router
+const admin = require('./src/routes/admin.js');
+app.use('/admin', admin);
+
+//login router
+const login = require('./src/routes/login.js');
+app.use('/admin/login', login);
+
+//admin user router
+const user = require('./src/routes/user.js');
+app.use('/admin/users', user);
+
+//admin property router
+const property = require('./src/routes/property.js');
+app.use('/admin/properties', property);
+
+//admin agent router
+const agent = require('./src/routes/agent.js');
+app.use('/admin/agents', agent);
 
 
 // MongoDB connection
