@@ -114,7 +114,8 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(/img/Rproperty-2.jpg)">
+      {{#each rentBanner}}
+      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(data:image/jpeg;base64,{{this.image}})">
         <div class="overlay overlay-a"></div>
         <div class="intro-content display-table">
           <div class="table-cell">
@@ -122,15 +123,15 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345
+                    <p class="intro-title-top">{{this.archipelago}}
+                      <br> {{this.lotsize}}
                     </p>
                     <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Rino
-                      <br> Venda Road Five
+                      <span class="color-b">{{this.name}} </span> 
+                      <br> {{this.address}}
                     </h1>
                     <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
+                      <a href="/properties/{{this._id}}"><span class="price-a">rent | {{this.price}}</span></a>
                     </p>
                   </div>
                 </div>
@@ -139,31 +140,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(/img/Rproperty-3.jpg)">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <p class="intro-title-top">Doral, Florida
-                      <br> 78345
-                    </p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">204 </span> Alira
-                      <br> Roan Road One
-                    </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {{/each}}
     </div>
     <div class="swiper-pagination"></div>
   </div><!-- End Intro Section -->

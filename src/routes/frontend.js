@@ -63,7 +63,8 @@ frontend.get('/', async function (req, res) {
         const agents = await Agent.find().limit(3).lean();
         const soldProperty = await Property.find({ status: "Sold" }).limit(4).lean();
         const latestProperty = await Property.find().sort({ dateCreated: -1 }).limit(4).lean();
-        res.render('user-home', {agents, soldProperty, latestProperty});
+        const rentBanner= await Property.find({ status: "Rent" }).limit(2).lean();
+        res.render('user-home', {agents, soldProperty, latestProperty, rentBanner});
     } catch (error) {
         res.status(500).send('Error fetching data from the database.');
     }    
