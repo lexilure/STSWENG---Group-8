@@ -38,14 +38,19 @@ async function runReport() {
   let averageSessionDuration, screenPageViews, sessions, activeUsers, newUsers;
   // Extract the metric values from the response
   if (response.rows.length > 0) {
-    [averageSessionDuration, screenPageViews, sessions, activeUsers, newUsers] = response.rows[0].metricValues;
-  } else {
+    const metricValues = response.rows[0].metricValues;
+    averageSessionDuration = metricValues[0].value;
+    screenPageViews = metricValues[1].value;
+    sessions = metricValues[2].value;
+    activeUsers = metricValues[3].value;
+    newUsers = metricValues[4].value;
+   } else {
     averageSessionDuration = 0;
     screenPageViews = 0;
     sessions = 0;
     activeUsers = 0;
     newUsers = 0;
-  }
+   }
 
   return {
     averageSessionDuration,
@@ -66,6 +71,11 @@ admin.get('/', sessionChecker, async function (req, res) {
 // Admin Inquiries CRUD Page
 admin.get('/inquiries', sessionChecker, async function (req, res) {
   res.render('admin-inquiries');
+});
+
+admin.get('/download-inquiries', (req, res) => {
+  const file = `${__dirname}/../data/inquiries.xlsx`; // Adjust the path to where xlsx file is located
+  res.download(file); // Set the correct path for file
 });
 
 admin.get('/logout', sessionChecker, async function (req, res) {
