@@ -29,6 +29,7 @@ property.post('/add', upload.single('imageUpload'), async function (req, res) {
 
     const { propertyName, propertyArchipelago, propertyAddress, propertyPrice, propertyStatus, lotSize, floorSize, numFloors, numRooms, additionalFeatures } = req.body;
     if (!propertyName || !propertyArchipelago || !propertyAddress || !propertyPrice || !propertyStatus || !lotSize || !floorSize || !numFloors || !numRooms || !additionalFeatures) {
+        res.redirect('/admin/properties/add');
         return res.status(400).send('Please provide the necessary information.');
     }
     //console.log(req.file);
@@ -36,12 +37,18 @@ property.post('/add', upload.single('imageUpload'), async function (req, res) {
         const existingProperty = await Property.findOne({ propertyName });
 
         if (existingProperty) {
+            res.redirect('/admin/properties/add');
             return res.status(409).send('Property already exists in the database.');
         }
         
-        // Convert the uploaded image to base64
-        const imageBase64 = req.file ? Buffer.from(req.file.buffer).toString('base64') : null;
-        //console.log(imageBase64);
+        // Check if the user uploaded an image
+        let imageBase64 = null;
+        if (req.file) {
+            // Convert the uploaded image to base64
+            imageBase64 = Buffer.from(req.file.buffer).toString('base64');
+        } else {
+            res.redirect('/admin/properties/add');
+        }
         const newProperty = new Property({
             name: propertyName,
             archipelago: propertyArchipelago,

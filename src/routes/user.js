@@ -32,6 +32,7 @@ user.post('/add', async function (req, res) {
     const { username, password } = req.body;
     //console.log(req.body)
     if (!username || !password) {
+        res.redirect('/admin/users/add');
         return res.status(400).send('Please provide username and password.');
     }
 
@@ -39,6 +40,7 @@ user.post('/add', async function (req, res) {
         const existingUser = await User.findOne({ username });
 
         if (existingUser) {
+            res.redirect('/admin/users/add');
             return res.status(409).send('Username already exists in the database.');
         }
 

@@ -30,6 +30,7 @@ agent.post('/add', upload.single('imageUpload'), async function (req, res) {
 
     const { agentName, agentEmail, agentEducation, agentFB, agentX, agentInstagram, agentLinkedIn} = req.body;
     if (!agentName || !agentEmail || !agentEducation || !agentFB || !agentX || !agentInstagram || !agentLinkedIn) {
+        res.redirect('/admin/agents/add');
         return res.status(400).send('Please provide the necessary information.');
     }
     console.log(req.file);
@@ -37,12 +38,17 @@ agent.post('/add', upload.single('imageUpload'), async function (req, res) {
         const existingAgent = await Agent.findOne({ agentName });
 
         if (existingAgent) {
+            res.redirect('/admin/agents/add');
             return res.status(409).send('Agent already exists in the database.');
         }
         
-        // Convert the uploaded image to base64
-        const imageBase64 = req.file ? Buffer.from(req.file.buffer).toString('base64') : null;
-        //console.log(imageBase64);
+        let imageBase64 = null;
+        if (req.file) {
+            // Convert the uploaded image to base64
+            imageBase64 = Buffer.from(req.file.buffer).toString('base64');
+        } else {
+            res.redirect('/admin/agents/add');
+        }
         const newAgent = new Agent({
             name: agentName,
             email: agentEmail,
