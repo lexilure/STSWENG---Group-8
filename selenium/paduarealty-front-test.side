@@ -110,6 +110,118 @@
       "targets": [],
       "value": "http://localhost:3000/contact"
     }]
+  }, {
+    "id": "b7af9b42-6c47-4687-991a-5b4d80928209",
+    "name": "admin-page",
+    "commands": [{
+      "id": "2c8594d0-117b-4d74-84bc-96d42d907d9a",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97d09c66-cda5-4f8f-afd3-ca66527bd2b6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "546ab578-c9ef-48d4-bfc3-3ec151087bd7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Here",
+      "targets": [
+        ["linkText=Here", "linkText"],
+        ["css=.credits > .credits > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Here')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/login')]", "xpath:href"],
+        ["xpath=//footer/div/div/div/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Here')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6d6c7c5-e994-4339-9699-fd28a0dfaffc",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "216b870e-8f69-42d4-bc54-14852c3b7edf",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "user1"
+    }, {
+      "id": "8cd8dc20-696f-4562-bc2f-2d191c58b4a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div/div[2]/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "810fcd99-3b6f-4735-8ea7-5bb42202180a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//main[@id='main']/div/div/div/div[2]/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "363290d6-62e0-4232-93a1-5249cd6fc9a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.section-agents",
+      "targets": [
+        ["css=.section-agents", "css:finder"],
+        ["xpath=//section", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9666964-8e69-4319-975c-6f888386bb46",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.nav-item:nth-child(6) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//div[@id='navbarDefault']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/admin/logout')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "149ce5d2-9585-462c-bd6e-6161a6ae02c1",
