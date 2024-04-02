@@ -30,18 +30,15 @@ user.get('/add', sessionChecker, async function (req, res) {
 user.post('/add', async function (req, res) {
 
     const { username, password } = req.body;
-    //console.log(req.body)
     if (!username || !password) {
-        res.redirect('/admin/users/add');
-        return res.status(400).send('Please provide username and password.');
+        return res.redirect('/admin/users/add');
     }
 
     try {
         const existingUser = await User.findOne({ username });
 
         if (existingUser) {
-            res.redirect('/admin/users/add');
-            return res.status(409).send('Username already exists in the database.');
+            return res.redirect('/admin/users/add');
         }
 
         const salt = bcrypt.genSaltSync(10);
@@ -56,7 +53,6 @@ user.post('/add', async function (req, res) {
 
         res.redirect('/admin/users/');
     } catch (error) {
-        console.log(error)
         res.status(500).send('Error registering the user.');
     }
 });
@@ -65,7 +61,6 @@ user.post('/add', async function (req, res) {
 
 user.post('/delete/:id', async function (req, res) {
     const userId = req.params.id;
-    //console.log(userId);
     try {
         const deletedUser = await User.findByIdAndDelete(userId);
         if (!deletedUser) {
@@ -73,7 +68,6 @@ user.post('/delete/:id', async function (req, res) {
         }
         res.redirect('/admin/users/');
     } catch (error) {
-        console.log(error)
         res.status(500).send('Error deleting the user.');
     }
 });

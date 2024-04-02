@@ -30,16 +30,15 @@ agent.post('/add', upload.single('imageUpload'), async function (req, res) {
 
     const { agentName, agentEmail, agentEducation, agentFB, agentX, agentInstagram, agentLinkedIn} = req.body;
     if (!agentName || !agentEmail || !agentEducation || !agentFB || !agentX || !agentInstagram || !agentLinkedIn) {
-        res.redirect('/admin/agents/add');
-        return res.status(400).send('Please provide the necessary information.');
+       
+        return res.redirect('/admin/agents/add');
     }
-    console.log(req.file);
+
     try {
         const existingAgent = await Agent.findOne({ agentName });
 
         if (existingAgent) {
-            res.redirect('/admin/agents/add');
-            return res.status(409).send('Agent already exists in the database.');
+            return  res.redirect('/admin/agents/add');
         }
         
         let imageBase64 = null;
@@ -47,7 +46,7 @@ agent.post('/add', upload.single('imageUpload'), async function (req, res) {
             // Convert the uploaded image to base64
             imageBase64 = Buffer.from(req.file.buffer).toString('base64');
         } else {
-            res.redirect('/admin/agents/add');
+            return  res.redirect('/admin/agents/add');
         }
         const newAgent = new Agent({
             name: agentName,
@@ -62,11 +61,8 @@ agent.post('/add', upload.single('imageUpload'), async function (req, res) {
 
         await newAgent.save();
         res.redirect('/admin/agents/');
-        console.log("Successfully added agent")
     } catch (error) {
-        console.log(error)
         res.status(500).send('Error registering the agent.');
-        console.log("Error adding agent")
     }
 });
 
@@ -82,7 +78,6 @@ agent.get('/edit/:id', sessionChecker, async function (req, res) {
         // Pass the agent data to the template
         res.render('admin-editagent', { agent });
     } catch (error) {
-        console.log(error);
         res.status(500).send('Error fetching the agent.');
     }
 });
@@ -120,18 +115,16 @@ agent.post('/edit/:id', upload.single('imageUpload'), async function (req, res) 
         await agent.save();
 
         res.redirect('/admin/agents/');
-        console.log("edit success")
     } catch (error) {
-        console.log(error);
         res.status(500).send('Error updating the agent.');
-        console.log("edit failed")
+
     }
 });
 
 // Delete Agent (Delete)
 agent.post('/delete/:id', async function (req, res) {
     const agentId = req.params.id;
-    //console.log(userId);
+
     try {
         const deletedUser = await Agent.findByIdAndDelete(agentId);
         if (!deletedUser) {
@@ -139,7 +132,7 @@ agent.post('/delete/:id', async function (req, res) {
         }
         res.redirect('/admin/agents/');
     } catch (error) {
-        console.log(error)
+
         res.status(500).send('Error deleting the agents.');
     }
 });
