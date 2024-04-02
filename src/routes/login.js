@@ -15,10 +15,8 @@ login.get('/', async function (req, res) {
 // Backend
 login.post('/', async function (req, res) {
     const { username, password } = req.body;
-    console.log(req.body);
 
     if (!username || !password) {
-        console.log("No Username or Password");
         return res.redirect('/admin/login');
     }
 
