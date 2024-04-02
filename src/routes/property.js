@@ -29,7 +29,6 @@ property.post('/add', upload.single('imageUpload'), async function (req, res) {
 
     const { propertyName, propertyArchipelago, propertyAddress, propertyPrice, propertyStatus, lotSize, floorSize, numFloors, numRooms, additionalFeatures } = req.body;
     if (!propertyName || !propertyArchipelago || !propertyAddress || !propertyPrice || !propertyStatus || !lotSize || !floorSize || !numFloors || !numRooms || !additionalFeatures) {
-       
         return  res.redirect('/admin/properties/add');
     }
     try {
