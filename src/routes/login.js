@@ -26,13 +26,11 @@ login.post('/', async function (req, res) {
         const existingUser = await User.findOne({ username });
 
         if (!existingUser) {
-            console.log("No Username or Password");
             return res.redirect('/admin/login');
         }
 
         const isPasswordCorrect = await bcrypt.compare(password, existingUser.password);
         if (!isPasswordCorrect) {
-            console.log("Incorrect Password");
             return res.redirect('/admin/login'); 
         }
 
@@ -40,10 +38,8 @@ login.post('/', async function (req, res) {
             id: existingUser._id,
             username: existingUser.username
         };
-        console.log("Login Successful");
         return res.redirect('/admin/'); 
     } catch (error) {
-        console.log(error);
         return res.redirect('/admin/login');
     }
 });
