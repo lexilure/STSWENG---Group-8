@@ -14,40 +14,37 @@ login.get('/', async function (req, res) {
 
 // Backend
 login.post('/', async function (req, res) {
-
     const { username, password } = req.body;
-    console.log(req.body)
+    console.log(req.body);
+
     if (!username || !password) {
-        console.log("No Username or Password")
-        res.redirect('/admin/');
-        return res.status(400).send('Please provide username and password.');
+        console.log("No Username or Password");
+        return res.redirect('/admin/login');
     }
 
     try {
         const existingUser = await User.findOne({ username });
 
         if (!existingUser) {
-            console.log("No Username or Password")
-            res.redirect('/admin/');
-            return res.status(409).send('Username does not exist in the database.');
+            console.log("No Username or Password");
+            return res.redirect('/admin/login');
         }
 
-        const isPasswordCorrect = await bcrypt.compare(password, existingUser.password)
+        const isPasswordCorrect = await bcrypt.compare(password, existingUser.password);
         if (!isPasswordCorrect) {
-            console.log("Incorrect Password")
-            res.redirect('/admin/');
-            return res.status(401).send('Incorrect Username.');
+            console.log("Incorrect Password");
+            return res.redirect('/admin/login'); 
         }
 
         req.session.user = {
             id: existingUser._id,
             username: existingUser.username
         };
-        console.log("Login Successful")
-        res.redirect('/admin/');
+        console.log("Login Successful");
+        return res.redirect('/admin/'); 
     } catch (error) {
-        console.log(error)
-        res.status(500).send('Error logging in.');
+        console.log(error);
+        return res.redirect('/admin/login');
     }
 });
 

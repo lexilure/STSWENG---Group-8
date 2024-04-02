@@ -39,7 +39,7 @@ async function runReport() {
   // Extract the metric values from the response
   if (response.rows.length > 0) {
     const metricValues = response.rows[0].metricValues;
-    averageSessionDuration = metricValues[0].value;
+    averageSessionDuration = metricValues[0].value.toFixed(2);
     screenPageViews = metricValues[1].value;
     sessions = metricValues[2].value;
     activeUsers = metricValues[3].value;

@@ -29,16 +29,14 @@ property.post('/add', upload.single('imageUpload'), async function (req, res) {
 
     const { propertyName, propertyArchipelago, propertyAddress, propertyPrice, propertyStatus, lotSize, floorSize, numFloors, numRooms, additionalFeatures } = req.body;
     if (!propertyName || !propertyArchipelago || !propertyAddress || !propertyPrice || !propertyStatus || !lotSize || !floorSize || !numFloors || !numRooms || !additionalFeatures) {
-        res.redirect('/admin/properties/add');
-        return res.status(400).send('Please provide the necessary information.');
+       
+        return  res.redirect('/admin/properties/add');
     }
-    //console.log(req.file);
     try {
         const existingProperty = await Property.findOne({ propertyName });
 
         if (existingProperty) {
-            res.redirect('/admin/properties/add');
-            return res.status(409).send('Property already exists in the database.');
+            return res.redirect('/admin/properties/add');
         }
         
         // Check if the user uploaded an image
@@ -66,11 +64,8 @@ property.post('/add', upload.single('imageUpload'), async function (req, res) {
 
         await newProperty.save();
         res.redirect('/admin/properties/');
-        console.log("Successfully added property")
     } catch (error) {
-        console.log(error)
         res.status(500).send('Error registering the property.');
-        console.log("Error adding property")
     }
 });
 
@@ -87,7 +82,6 @@ property.get('/edit/:id', sessionChecker, async function (req, res) {
         // Pass the property data to the template
         res.render('admin-editproperty', { property });
     } catch (error) {
-        console.log(error);
         res.status(500).send('Error fetching the property.');
     }
 });
@@ -128,18 +122,14 @@ property.post('/edit/:id', upload.single('imageUpload'), async function (req, re
         // Save the updated agent back to the database
         await property.save();
         res.redirect('/admin/properties/');
-        console.log("edit success")
     } catch (error) {
-        console.log(error);
         res.status(500).send('Error updating the agent.');
-        console.log("edit failed")
     }
 });
 
 // Delete Property (Delete)
 property.post('/delete/:id', async function (req, res) {
     const propertyId = req.params.id;
-    //console.log(userId);
     try {
         const deletedProperty = await Property.findByIdAndDelete(propertyId);
         if (!deletedProperty) {
@@ -147,7 +137,6 @@ property.post('/delete/:id', async function (req, res) {
         }
         res.redirect('/admin/properties/');
     } catch (error) {
-        console.log(error)
         res.status(500).send('Error deleting the property.');
     }
 });
