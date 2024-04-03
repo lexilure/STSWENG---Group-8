@@ -64,11 +64,11 @@ user.post('/delete/:id', async function (req, res) {
     try {
         const deletedUser = await User.findByIdAndDelete(userId);
         if (!deletedUser) {
-            res.status(404).send('User not found');
+            return res.status(404).send('User not found');
         }
-        res.redirect('/admin/users/');
+        return res.redirect('/admin/users/');
     } catch (error) {
-        res.status(500).send('Error deleting the user.');
+        return res.status(500).send('Error deleting the user.');
     }
 });
 
