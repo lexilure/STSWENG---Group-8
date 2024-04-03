@@ -12,7 +12,7 @@ app.use('/admin/login', userRoutes); // Use your user routes
 jest.mock('bcryptjs'); // Mock bcrypt
 
 jest.mock('../../src/models/user.js'); // Mock the User model
-
+  
 describe('Login Functionality', () => {
   it('should successfully login a user with correct credentials', async () => {
     // Mock User.findOne to simulate an existing user
