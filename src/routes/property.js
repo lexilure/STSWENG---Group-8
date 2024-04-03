@@ -44,7 +44,7 @@ property.post('/add', upload.single('imageUpload'), async function (req, res) {
             // Convert the uploaded image to base64
             imageBase64 = Buffer.from(req.file.buffer).toString('base64');
         } else {
-            res.redirect('/admin/properties/add');
+            return res.redirect('/admin/properties/add');
         }
         const newProperty = new Property({
             name: propertyName,
@@ -62,9 +62,9 @@ property.post('/add', upload.single('imageUpload'), async function (req, res) {
         });
 
         await newProperty.save();
-        res.redirect('/admin/properties/');
+        return res.redirect('/admin/properties/');
     } catch (error) {
-        res.status(500).send('Error registering the property.');
+        return res.status(500).send('Error registering the property.');
     }
 });
 
@@ -105,6 +105,7 @@ property.post('/edit/:id', upload.single('imageUpload'), async function (req, re
             return res.status(404).send('Property not found.');
         }
 
+
         // Update the agent's fields with the new data if it's provided
         if (propertyName) property.name = propertyName;
         if (propertyArchipelago) property.archipelago = propertyArchipelago;
@@ -120,9 +121,9 @@ property.post('/edit/:id', upload.single('imageUpload'), async function (req, re
 
         // Save the updated agent back to the database
         await property.save();
-        res.redirect('/admin/properties/');
+        return res.redirect('/admin/properties/');
     } catch (error) {
-        res.status(500).send('Error updating the agent.');
+        return res.status(500).send('Error updating the agent.');
     }
 });
 
@@ -132,11 +133,11 @@ property.post('/delete/:id', async function (req, res) {
     try {
         const deletedProperty = await Property.findByIdAndDelete(propertyId);
         if (!deletedProperty) {
-            res.status(404).send('Property not found');
+            return res.status(404).send('Property not found');
         }
         res.redirect('/admin/properties/');
     } catch (error) {
-        res.status(500).send('Error deleting the property.');
+        return res.status(500).send('Error deleting the property.');
     }
 });
 
