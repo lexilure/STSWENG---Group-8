@@ -5,7 +5,7 @@ const Agent = require('../models/Agent.js');
 
 const app = express();
 app.use(express.json()); // Ensure your app uses JSON
-app.use('/admin-agents', agentRoutes); // Use your agent routes
+app.use('/admin/agents', agentRoutes); // Use your agent routes
 
 jest.mock('../models/Agent.js'); // Mock the Agent model
 
