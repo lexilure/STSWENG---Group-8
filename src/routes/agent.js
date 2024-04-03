@@ -60,7 +60,7 @@ agent.post('/add', upload.single('imageUpload'), async function (req, res) {
         });
 
         await newAgent.save();
-        res.redirect('/admin/agents/');
+        return res.redirect('/admin/agents/');
     } catch (error) {
         res.status(500).send('Error registering the agent.');
     }
@@ -114,7 +114,7 @@ agent.post('/edit/:id', upload.single('imageUpload'), async function (req, res) 
         // Save the updated agent back to the database
         await agent.save();
 
-        res.redirect('/admin/agents/');
+        return res.redirect('/admin/agents/');
     } catch (error) {
         res.status(500).send('Error updating the agent.');
 
@@ -128,12 +128,12 @@ agent.post('/delete/:id', async function (req, res) {
     try {
         const deletedUser = await Agent.findByIdAndDelete(agentId);
         if (!deletedUser) {
-            res.status(404).send('Agent not found');
+            return res.status(404).send('Agent not found');
         }
-        res.redirect('/admin/agents/');
+        return res.redirect('/admin/agents/');
     } catch (error) {
 
-        res.status(500).send('Error deleting the agents.');
+        return res.status(500).send('Error deleting the agents.');
     }
 });
 
