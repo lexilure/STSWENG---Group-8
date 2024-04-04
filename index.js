@@ -5,16 +5,13 @@ const connect = require('./src/models/db.js');
 
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
-const RedisStore = require('connect-redis')(session)
 
 dotenv.config();
 const app = express();
 
-
 app.use(cookieParser());
 app.use(session({
     key: 'user_sid',
-    store: new RedisStore(options),
     secret: 'somerandonstuffs',
     resave: false,
     saveUninitialized: false,
