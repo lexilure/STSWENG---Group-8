@@ -1,9 +1,9 @@
-name: Workflow 1
+name: Main Workflow
 
 on:
   pull_request:
   push:
-    branches: [ "main" ]
+    branches: [ "backend-test" ]
 
 jobs:
   build:
@@ -16,11 +16,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '21.x'
 
-      - name: Install Selenium IDE Runner
-        run: npm install -g selenium-side-runner
+      - name: Install Supertest
+        run: npm install supertest 
+      
+      - name: Install Jest
+        run: npm install jest
 
+      - name: Install Continuous Integration Environments     
+        run: npm ci
+          
+      - name: Run Tests
+        run: npm test
+        
       - name: Deploy to Render
-        if: github.ref == 'refs/heads/main'
+        if: success() && github.ref == 'refs/heads/main' 
         run: curl -X POST https://api.render.com/deploy/srv-co19ku8l6cac73cqdnkg?key=Ac4g_NCprMc
