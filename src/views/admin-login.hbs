@@ -15,26 +15,21 @@
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
 
     <!-- Vendor CSS Files -->
     <link
       href="/vendor/animate.css/animate.min.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link
       href="/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link
       href="/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link
       href="/vendor/swiper/swiper-bundle.min.css"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
 
     <!-- Template Main CSS File -->
     <link href="/css/style.css" rel="stylesheet" />
@@ -49,55 +44,64 @@
   ======================================================== -->
   </head>
 
+  <body>
 
-<body>
+    <!-- ======= Header/Navbar ======= -->
+    <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand text-brand"><img src="/img/padua-realty-logo.png"
+            style="width: 100px; height: 100px;"></a>
 
-  <!-- ======= Header/Navbar ======= -->
-  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand text-brand"><img src="/img/padua-realty-logo.png" style="width: 100px; height: 100px;"></a>
-  
-    </div>
-  </nav><!-- End Header/Navbar -->
+      </div>
+    </nav><!-- End Header/Navbar -->
 
-<main id="main">
+    <main id="main">
 
-<div class="d-flex justify-content-center align-items-center" style="min-height: 120vh;">
-    <div class="container">
-        <div class="row">
+      <div class="d-flex justify-content-center align-items-center"
+        style="min-height: 120vh;">
+        <div class="container">
+          <div class="row">
             <!-- Picture Column -->
             <div class="col-md-6">
-                <img src="/img/House-Cover-1.jpg" alt="Your Image" class="img-fluid">
+              <img src="/img/House-Cover-1.jpg" alt="Your Image"
+                class="img-fluid">
             </div>
             <!-- Form Column -->
             <div class="col-md-6">
-                <h2 class="title-a text-center">Admin Log In</h2>
-                <form class="custom-form form-container" method="POST" action="/admin/login/" novalidate>
-                    <!-- Email input -->
-                    <div class="form-outline mb-4 mt-2">
-                        <label class="form-label" for="form2Example1">Username</label>
-                        <input type="text" id="username" name="username" class="form-control" />
-                        
-                    </div>
-                
-                    <!-- Password input -->
-                    <div class="form-outline mb-4 mt-2">
-                        <label class="form-label" for="form2Example2">Password</label>
-                        <input type="password" id="password" name="password" class="form-control" />
-                        
-                    </div>
-                
-                    <!-- Submit button -->
-                    <div class="text-center mb-4">
-                        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                    </div>
-                
-                </form>
+              <h2 class="title-a text-center">Admin Log In</h2>
+              <form id="adminLoginForm" class="custom-form form-container"
+                method="POST"
+                action="/admin/login/" novalidate>
+                <!-- Email input -->
+                <div class="form-outline mb-4 mt-2">
+                  <label class="form-label" for="form2Example1">Username</label>
+                  <input type="text" id="username" name="username"
+                    class="form-control" />
+
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4 mt-2">
+                  <label class="form-label" for="form2Example2">Password</label>
+                  <input type="password" id="password" name="password"
+                    class="form-control" />
+
+                </div>
+
+                <!-- Submit button -->
+                <div class="text-center mb-4">
+                  <button type="submit" class="btn btn-primary btn-block">Sign
+                    in</button>
+                </div>
+                <div id="warningMessage"
+                  style="color: white; display: none; text-align: center;">Please
+                  fill in both the username and password fields.</div>
+              </form>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-</main>
+      </div>
+    </main>
     <!-- ======= Footer ======= -->
     <section class="section-footer">
       <div class="container">
@@ -115,14 +119,14 @@
               </p>
             </div>
             Designed by <a href>2324STSSWENGS14</a>
-                    <div class="credits">
-                      <!--
+            <div class="credits">
+              <!--
                     All the links in the footer should remain intact.
                     You can delete the links only if you purchased the pro version.
                     Licensing information: https://bootstrapmade.com/license/
                     Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
                     -->
-                      Return to main page <a href="/">Here</a>
+              Return to main page <a href="/">Here</a>
             </div>
           </div>
         </div>
@@ -133,9 +137,8 @@
     <div id="preloader"></div>
     <a
       href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+      class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -144,5 +147,39 @@
 
     <!-- Template Main JS File -->
     <script src="/js/main.js"></script>
+    <script>
+document.getElementById('adminLoginForm').addEventListener('submit', function(event) {
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+    var warningMessage = document.getElementById('warningMessage');
+
+    // Remove any existing error classes
+    username.classList.remove('input-error');
+    password.classList.remove('input-error');
+
+    if (username.value === '' || password.value === '') {
+        event.preventDefault(); // Prevent form submission
+        warningMessage.style.display = 'block'; // Show the warning message
+
+        // Add error class to empty input fields
+        if (username.value === '') {
+            username.classList.add('input-error');
+        }
+        if (password.value === '') {
+            password.classList.add('input-error');
+        }
+    } else {
+        warningMessage.style.display = 'none'; // Hide the warning message if inputs are valid
+    }
+});
+</script>
+
+    <style>
+    .input-error {
+        border-color: black;
+        border-width: 3px; /* Increase border width */
+    }
+</style>
+
   </body>
 </html>
