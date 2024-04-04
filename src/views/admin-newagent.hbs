@@ -107,7 +107,7 @@
                     class="image-upload d-flex justify-content-center align-items-center">
                     <label for="imageUpload" class="btn btn-primary">
                       Upload Image
-                      <input type="file" id="imageUpload" name="imageUpload" accept="image/*" style="display:none;">
+                      <input class="required" type="file" id="imageUpload" name="imageUpload" accept="image/*" style="display:none;">
                     </label>
                     <img id="previewImage" src="#" alt="Uploaded Image"
                       style="display:none;">
@@ -122,19 +122,19 @@
                       <!-- Name -->
                       <div class="form-group">
                         <label for="agentName">Name:</label>
-                        <input type="text" class="form-control" id="agentName"
+                        <input type="text" class="form-control required" id="agentName"
                           name="agentName">
                       </div>
                       <!-- Email -->
                       <div class="form-group">
                         <label for="agentEmail">Email:</label>
-                        <input type="email" class="form-control" id="agentEmail"
+                        <input type="email" class="form-control required" id="agentEmail"
                           name="agentEmail">
                       </div>
                       <!-- Education -->
                       <div class="form-group">
                         <label for="agentEducation">Education:</label>
-                        <input type="text" class="form-control"
+                        <input type="text" class="form-control required"
                           id="agentEducation" name="agentEducation">
                       </div>
                     </div>
@@ -167,6 +167,8 @@
                         </div>
                       </div>
                     </div>
+                    <!-- Error Message -->
+                    <div class="text-center error" id="error-message" style="display: none" role="alert"></div>
                     <!-- Submit Button -->
                     <div class="text-center mt-4">
                       <button type="submit"
@@ -194,14 +196,15 @@
                         Reserved.
                       </p>
                     </div>
+                    Designed by <a href>2324STSSWENGS14</a>
                     <div class="credits">
                       <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-            -->
-                      Designed by <a href>2324STSSWENGS14</a>
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
+                    -->
+                      Return to main page <a href="/">Here</a>
                     </div>
                   </div>
                 </div>
@@ -222,6 +225,7 @@
 
             <!-- Template Main JS File -->
             <script src="/js/main.js"></script>
+            <script src="/js/addagent.js"></script>
             <script>
             document.getElementById('imageUpload').addEventListener('change', function(e) {
                 const file = e.target.files[0];
