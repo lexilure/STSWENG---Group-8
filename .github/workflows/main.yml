@@ -24,9 +24,12 @@ jobs:
       - name: Install Jest
         run: npm install jest
 
-      - name: Running Tests
-        run: npm test
+      - name: Try     
+        run: npm ci
         
+      - name: Run Tests
+        run: npm test
+
       - name: Deploy to Render
         if: github.ref == 'refs/heads/main'
         run: curl -X POST https://api.render.com/deploy/srv-co19ku8l6cac73cqdnkg?key=Ac4g_NCprMc
