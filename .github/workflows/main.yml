@@ -30,6 +30,9 @@ jobs:
       - name: Run Tests
         run: npm test
 
+      - name: Starting Server
+        run: npm start
+
       - name: Curl
         run: curl http://localhost:3000 
 
