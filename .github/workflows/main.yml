@@ -31,7 +31,7 @@ jobs:
         run: npm test
 
       - name: Starting Server
-        run: npm start
+        run: npm start & sleep 5
 
       - name: Curl
         run: curl http://localhost:3000 
