@@ -18,8 +18,11 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install Selenium IDE Runner
-        run: npm install -g selenium-side-runner
+      - name: Install Supertest
+        run: npm install supertest 
+      
+      - name: Install Jest
+        run: npm install jest
 
       - name: Deploy to Render
         if: github.ref == 'refs/heads/main'
