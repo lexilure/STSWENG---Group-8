@@ -44,11 +44,14 @@ describe('POST /admin/login/', () => {
 
     it('should login successfully with correct credentials', async () => {
       const req = { body: { username: 'testUser', password: 'testPassword' } };
-      const res = {
-          redirect: function(url) {
-              expect(url).toBe('/admin/');
-          }
-      };
+    const res = {
+        redirect: function(url) {
+            expect(url).toBe('/admin/');
+        },
+        status: function(code) {
+            expect(code).toBe(200); 
+            return this; 
+        }};      
     });
     
     it('should respond with a redirect to /admin/login on failed login', async () => {
@@ -59,5 +62,32 @@ describe('POST /admin/login/', () => {
 
         expect(response.headers.location).toBe('/admin/login');
     });
+
+    it('should respond with a redirect to /admin/login on username not found in the database', async () => {
+      const response = await request(app)
+          .post('/')
+          .send({ username: 'wrongusername', password: 'test' })
+
+      expect(response.statusCode).toEqual(302);
+      expect(response.headers.location).toBe('/admin/login');
+  });
+
+  it('should respond with a redirect to /admin/login on missing username', async () => {
+      const response = await request(app)
+          .post('/')
+          .send({ password: 'test' }) // username is missing
+  
+      expect(response.statusCode).toEqual(302);
+      expect(response.headers.location).toBe('/admin/login');
+  });
+  
+  it('should respond with a redirect to /admin/login on missing password', async () => {
+      const response = await request(app)
+          .post('/')
+          .send({ username: 'test' }) // password is missing
+  
+      expect(response.statusCode).toEqual(302);
+      expect(response.headers.location).toBe('/admin/login');
+  });
     
 });
