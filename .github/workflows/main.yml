@@ -3,7 +3,7 @@ name: Main Workflow
 on:
   pull_request:
   push:
-    branches: [ "backend-test" ]
+    branches: [ "main" ]
 
 jobs:
   build:
