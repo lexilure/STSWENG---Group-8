@@ -24,9 +24,9 @@ jobs:
       - name: Install Jest
         run: npm install jest
 
-      - name: Try     
+      - name: Install Continuous Integration Environments     
         run: npm ci
-        
+
       - name: Run Tests
         run: npm test
 
