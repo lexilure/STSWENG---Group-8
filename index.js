@@ -5,9 +5,11 @@ const connect = require('./src/models/db.js');
 
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const MemoryStore = require('memorystore')(session)
 
 dotenv.config();
 const app = express();
+
 
 app.use(cookieParser());
 app.use(session({
@@ -17,7 +19,10 @@ app.use(session({
     saveUninitialized: false,
     cookie: {
         expires: 600000
-    }
+    },
+    store: new MemoryStore({
+        checkPeriod: 86400000 // prune expired entries every 24h
+    }),
 }));
 
 // Middleware for parsing JSON and URL-encoded request bodies
