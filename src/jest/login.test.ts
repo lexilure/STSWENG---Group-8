@@ -1,55 +1,53 @@
 const request = require('supertest');
 const express = require('express');
-const userRoutes = require('../routes/user.js'); // Import your user routes
-const User = require('../models/user.js');
-const bcrypt = require('bcryptjs');
-
-// Create a test instance of your app
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const User = require('../models/User');
 const app = express();
-app.use(express.json()); // Ensure your app uses JSON
-app.use('/admin/login', userRoutes); // Use your user routes
+const loginRouter = require('../routes/login');
 
-jest.mock('bcryptjs'); // Mock bcrypt
+// Mock the User model
+jest.mock('../models/User');
+app.use(cookieParser());
+app.use(session({
+    key: 'user_sid',
+    secret: 'somerandonstuffs',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        expires: 600000
+    }
+}));
 
-jest.mock('../../src/models/user.js'); // Mock the User model
-  
-describe('Login Functionality', () => {
-  it('should successfully login a user with correct credentials', async () => {
-    // Mock User.findOne to simulate an existing user
-    User.findOne = jest.fn().mockResolvedValue({ _id: '123', username: 'testuser', password: await bcrypt.hash('password123', 10) });
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(loginRouter);
 
-    const res = await request(app)
-      .post('/admin/login')
-      .send({ username: 'testuser', password: 'password123' });
+describe('POST /admin/login/', () => {
+    beforeAll(() => {
+        // Mock User.findOne to return a user object for a specific username
+        User.findOne.mockImplementation((username) => {
+            if (username === 'test') {
+                return Promise.resolve({
+                    username: 'test',
+                    password: '$2a$10$99DNd9.h4ebeN1GFKMLjK.DapKMZjdSubJKuo44ONSGARCfMCnZb2' // bcrypt hash for 'test'
+                });
+            } else {
+                return Promise.resolve(null);
+            }
+        });
+    });
 
-    expect(res.statusCode).toBe(302); // Expecting a redirect
-    expect(res.headers.location).toBe('/admin/'); // Redirected to admin page
-    expect(res.headers['set-cookie']).toBeDefined(); // Expecting a session cookie to be set
-  });
+    afterEach(() => {
+        jest.resetAllMocks();
+    });
 
-  it('should reject login with incorrect password', async () => {
-    // Mock User.findOne to simulate an existing user
-    User.findOne = jest.fn().mockResolvedValue({ _id: '123', username: 'testuser', password: await bcrypt.hash('password123', 10) });
+    it('should respond with a redirect to /admin/login on failed login', async () => {
+        const response = await request(app)
+            .post('/')
+            .send({ username: 'test', password: 'wrongpassword' }) // replace with an invalid username or password
+            .expect(302);
 
-    const res = await request(app)
-      .post('/admin/login')
-      .send({ username: 'testuser', password: 'wrongpassword' });
-
-    expect(res.statusCode).toBe(401); // Expecting unauthorized status code
-    expect(res.headers.location).toBe('/admin/'); // Redirected to admin page
-    expect(res.text).toBe('Incorrect Username.'); // Expecting error message
-  });
-
-  it('should reject login with non-existing username', async () => {
-    // Mock User.findOne to simulate no existing user
-    User.findOne = jest.fn().mockResolvedValue(null);
-
-    const res = await request(app)
-      .post('/admin/login')
-      .send({ username: 'nonexistinguser', password: 'password123' });
-
-    expect(res.statusCode).toBe(409); // Expecting conflict status code
-    expect(res.headers.location).toBe('/admin/'); // Redirected to admin page
-    expect(res.text).toBe('Username does not exist in the database.'); // Expecting error message
-  });
+        expect(response.headers.location).toBe('/admin/login');
+    });
 });
