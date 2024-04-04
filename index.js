@@ -5,7 +5,7 @@ const connect = require('./src/models/db.js');
 
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
-const MemoryStore = require('memorystore')(session)
+const RedisStore = require('connect-redis')(session)
 
 dotenv.config();
 const app = express();
@@ -14,15 +14,13 @@ const app = express();
 app.use(cookieParser());
 app.use(session({
     key: 'user_sid',
+    store: new RedisStore(options),
     secret: 'somerandonstuffs',
     resave: false,
     saveUninitialized: false,
     cookie: {
         expires: 600000
-    },
-    store: new MemoryStore({
-        checkPeriod: 86400000 // prune expired entries every 24h
-    }),
+    }
 }));
 
 // Middleware for parsing JSON and URL-encoded request bodies
