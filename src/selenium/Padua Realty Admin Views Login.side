@@ -617,6 +617,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "8192136e-a039-46aa-a4b5-31714540ecdf",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "06d5c24a-b74a-4ab4-aa9d-c99a66301d0f",
       "comment": "",
       "command": "click",
@@ -628,6 +635,20 @@
         ["xpath=//button", "xpath:position"],
         ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "e7326ea8-50a9-498e-af2f-99addba52523",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=warningMessage",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39db816e-a81c-411a-9d39-8d512746238c",
+      "comment": "",
+      "command": "pause",
+      "target": "500",
+      "targets": [],
       "value": ""
     }, {
       "id": "af0199fa-fd2d-40af-a94d-dda11c8167e8",
