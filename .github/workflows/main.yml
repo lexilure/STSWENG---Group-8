@@ -40,7 +40,7 @@ jobs:
         run: npm install -g chromedriver
       
       - name: Run Selenium IDE tests
-        run: selenium-side-runner --server http://localhost:3000/ ../selenium/Padua_Realty_User_Views_Home.side
+        run: selenium-side-runner --server http://localhost:3000/ ../../src/selenium/Padua_Realty_User_Views_Home.side
 
       - name: Deploy to Render
         if: success() && github.ref == 'refs/heads/main' 
