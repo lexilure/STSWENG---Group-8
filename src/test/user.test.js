@@ -16,8 +16,8 @@ app.use((req, res, next) => {
   next();
 });
 
-jest.mock('../../src/models/user.js'); // Mock the User model
-const User = require('../../src/models/User.js');
+jest.mock('../models/User.js'); // Mock the User model
+const User = require('../models/User.js');
 
 jest.mock('bcryptjs'); // Mock bcrypt
 const bcrypt = require('bcryptjs');

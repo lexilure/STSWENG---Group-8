@@ -17,7 +17,7 @@ app.use((req, res, next) => {
   next();
 });
 
-jest.mock('../../src/models/Property.js'); // Mock the Property model
+jest.mock('../models/Property.js'); // Mock the Property model
 const Property = require('../../src/models/Property.js');
 
 describe('POST /add', () => {

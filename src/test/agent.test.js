@@ -17,8 +17,8 @@ app.use((req, res, next) => {
     next();
 });
 
-jest.mock('../../src/models/Agent.js'); // Mock the agent model
-const Agent = require('../../src/models/Agent.js');
+jest.mock('../models/Agent.js'); // Mock the agent model
+const Agent = require('../models/Agents.js');
 
 describe('POST /add', () => {
     it('should create a new agent with all required fields and a valid image file', async () => {
