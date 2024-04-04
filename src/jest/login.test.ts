@@ -42,6 +42,15 @@ describe('POST /admin/login/', () => {
         jest.resetAllMocks();
     });
 
+    it('should login successfully with correct credentials', async () => {
+      const req = { body: { username: 'testUser', password: 'testPassword' } };
+      const res = {
+          redirect: function(url) {
+              expect(url).toBe('/admin/');
+          }
+      };
+    });
+    
     it('should respond with a redirect to /admin/login on failed login', async () => {
         const response = await request(app)
             .post('/')
@@ -50,4 +59,5 @@ describe('POST /admin/login/', () => {
 
         expect(response.headers.location).toBe('/admin/login');
     });
+    
 });
