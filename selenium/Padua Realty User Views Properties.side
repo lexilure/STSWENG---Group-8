@@ -1,0 +1,294 @@
+{
+  "id": "87414657-6d7b-4af4-b4cd-6cba2a0a09f5",
+  "version": "2.0",
+  "name": "Padua Realty User Views: Properties",
+  "url": "http://localhost:3000/properties",
+  "tests": [{
+    "id": "ff24b143-6b82-47af-985e-81b895610cb5",
+    "name": "Properties: Home Navbar",
+    "commands": [{
+      "id": "88eefd18-8472-48ab-8f12-db820c3e989e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/properties",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c4a3a77-d3fc-4f71-b44f-fc9533848301",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1062x808",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c2dc283-e4c5-491f-90aa-a931b511bfc4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarDefault']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27c010f1-b191-4cb1-a2af-d150923aae8e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a2c73bd0-f8ff-4271-a020-6021ef6be970",
+    "name": "Properties: Agents Navbar",
+    "commands": [{
+      "id": "270c751d-ebd5-433a-9642-f628e942921c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/properties",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d00d7d01-db26-47d7-bd1f-c511a0017871",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1062x808",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff6e6ed1-0c02-4148-ad53-a676178980e0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Agents",
+      "targets": [
+        ["linkText=Agents", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Agents')]", "xpath:link"],
+        ["xpath=//div[@id='navbarDefault']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/agents')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Agents')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea58f30b-b266-48ea-b398-10c268e7be8d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "225594e7-e1f6-404b-9b2d-85bf39dc029e",
+    "name": "Properties: About Navbar",
+    "commands": [{
+      "id": "aeddc9f0-047c-4276-8ff3-bcd527c73963",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/properties",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec192793-7e2f-4f4b-9f30-1a2aac7347bb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dcf59f44-dac4-49e1-98e4-9f962b23e665",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=About",
+      "targets": [
+        ["linkText=About", "linkText"],
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'About')]", "xpath:link"],
+        ["xpath=//div[@id='navbarDefault']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/about-us')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'About')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8427f20d-326c-4195-ba07-ff7a35610a05",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9f758706-7ccb-4de7-99d9-389a634e9929",
+    "name": "Properties: Services Navbar",
+    "commands": [{
+      "id": "a0a850d8-8f44-4fe7-b82d-7edf1ac404fb",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/properties",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "827ab4d5-066b-4fba-9e12-cc4b9493c285",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1051x806",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92bfa536-1090-41f2-8ec3-b404f2ef3043",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Services",
+      "targets": [
+        ["linkText=Services", "linkText"],
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Services')]", "xpath:link"],
+        ["xpath=//div[@id='navbarDefault']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/services')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Services')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "031ab406-ea4c-4f10-afbb-53eaf5a485a9",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "aa7fd9eb-1c16-4480-ac35-3b56e455810a",
+    "name": "Properties: Contact Navbar",
+    "commands": [{
+      "id": "a9497b88-17c3-4a37-a735-8255743b5976",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/properties",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84a1e0f1-b1cc-4caa-ad96-602f2d978d13",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1051x806",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "29514343-3b5e-490c-85c4-369bf6833001",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Contact",
+      "targets": [
+        ["linkText=Contact", "linkText"],
+        ["css=.nav-item:nth-child(6) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Contact')]", "xpath:link"],
+        ["xpath=//div[@id='navbarDefault']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/contact')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Contact')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a664d56-1681-4c81-a5c7-80b9d6b38e64",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c352ecf5-4b9c-4043-ba4b-3074fa0c2761",
+    "name": "Properties: Properties to Home Card Link",
+    "commands": [{
+      "id": "38004145-b424-453a-8d97-f7074adb6576",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/properties",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee87efdc-8489-4995-9bc6-6a8f074281f3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1054x808",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d93e9e85-d426-4dde-9834-849030362268",
+      "comment": "",
+      "command": "click",
+      "target": "css=.breadcrumb-item > a",
+      "targets": [
+        ["css=.breadcrumb-item > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Home')])[2]", "xpath:link"],
+        ["xpath=//main[@id='main']/section/div/div/div[2]/nav/ol/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[8]", "xpath:href"],
+        ["xpath=//ol/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cbedbc9-9206-4bac-9745-d9822160b834",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ef966518-1432-4a95-8a91-8f6f2fb0acad",
+    "name": "Properties: Admin Footer Link",
+    "commands": [{
+      "id": "88260311-97b6-45c7-94aa-64507caa7648",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/properties",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f7e2a39-d707-4664-8e72-507a19c76a97",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1054x808",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94842833-9426-4df0-b80c-ee1de60536a0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Here",
+      "targets": [
+        ["linkText=Here", "linkText"],
+        ["css=.credits:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Here')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/admin/login')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Here')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d5909b6-c626-4097-9a73-e41596bd7c99",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "253b84b8-95e0-45da-adac-5b475ad989e3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ff24b143-6b82-47af-985e-81b895610cb5"]
+  }],
+  "urls": ["http://localhost:3000/properties"],
+  "plugins": []
+}
