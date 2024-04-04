@@ -36,6 +36,20 @@
       ],
       "value": ""
     }, {
+      "id": "d15c2a83-2cff-4432-9101-f267bbe47d76",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "c40979ec-75bf-4c80-b342-2852c4d8dec3",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/"
+    }, {
       "id": "f65fa07d-57b4-433c-b332-965f0221e528",
       "comment": "",
       "command": "close",
@@ -75,6 +89,20 @@
         ["xpath=//a[contains(.,'Properties')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "952db792-c545-40d2-bb3b-53e978f0fc8f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "abac72ad-3183-4553-966f-738ff3ce97fa",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/properties"
     }, {
       "id": "5bc038ac-b48e-44ff-a7ee-f9b3a1ec0610",
       "comment": "",
@@ -116,6 +144,20 @@
       ],
       "value": ""
     }, {
+      "id": "a04b2928-3847-49c7-bd7f-5cf9096a3ea1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "98505325-530a-463d-9f6e-676ed36a023f",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/about-us"
+    }, {
       "id": "7d61eb53-37d6-4433-956a-5ef99c23203b",
       "comment": "",
       "command": "close",
@@ -155,6 +197,20 @@
         ["xpath=//a[contains(.,'Services')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "d9672a1b-3347-47f1-aa17-1cc4008e0a13",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "d0c16107-2515-425e-96b2-cbb297a46550",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/services"
     }, {
       "id": "3bc51a3e-5ef1-45c2-b6e5-5477e4627d58",
       "comment": "",
@@ -196,6 +252,20 @@
       ],
       "value": ""
     }, {
+      "id": "23c711da-508f-4122-8f6e-d33e6ae95f5f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "54aab4b3-e257-46e1-ac4e-364ab9de9314",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/contact"
+    }, {
       "id": "d846be8f-3b19-4ab4-9672-c647da8bd7f1",
       "comment": "",
       "command": "close",
@@ -233,6 +303,20 @@
         ["xpath=//ol/li/a", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "01bb70c8-e1c1-4486-9d81-8976177d1313",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "6b20ee99-885d-496f-8d75-ab2fabab2a0e",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/"
     }, {
       "id": "f4ae7728-c025-4be4-b604-501fafd6c98b",
       "comment": "",
@@ -272,6 +356,20 @@
         ["xpath=//a[contains(.,'Here')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "527a243e-c3d4-452f-a3ed-0cb7d59c528f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "7ecb9a54-94be-448f-b9d4-c368c9a8a32c",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/admin/login"
     }, {
       "id": "a36ebddd-0bc9-43a4-8f82-e31303427372",
       "comment": "",

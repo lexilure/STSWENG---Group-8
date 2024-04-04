@@ -35,6 +35,27 @@
         ["xpath=//a[contains(.,'Properties')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "db1af5f7-ba6c-4d31-8ca5-525d7773289d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "02b96db4-ca32-49c4-93af-f93625210b8f",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/properties"
+    }, {
+      "id": "0cac60ff-96f2-4238-b1ab-e0e9f60f6ac5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "f931e00e-8922-4c6a-8950-a434bfa8aa10",
@@ -67,6 +88,27 @@
         ["xpath=//li[3]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Agents')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "5e6694d4-cd9c-4eeb-92e4-7e95252e1c43",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "3f0f2d06-d170-4eeb-9351-20bf40a736ed",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/agents"
+    }, {
+      "id": "e81a59a7-c3db-418c-b3ee-d699206eb8da",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }, {
@@ -101,6 +143,27 @@
         ["xpath=//a[contains(.,'About')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "4c129641-34ee-41c2-beb0-170b709c09a8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "6907c725-1f5a-4df9-9d17-dccf88d0f89a",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/about-us"
+    }, {
+      "id": "97d6fa60-62cf-4d67-a6d6-8ca32d43cd5d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "32aa1778-afbe-4ea0-a7c6-887cb9c24c2c",
@@ -133,6 +196,27 @@
         ["xpath=//li[5]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Services')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "a5929c12-8252-47e8-a8f8-94e528eb5f9b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "672bac4f-aff4-4d45-9781-d49a61f33cc4",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/services"
+    }, {
+      "id": "4912b70f-cb39-4205-a41b-25a73596d452",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }, {
@@ -167,6 +251,27 @@
         ["xpath=//a[contains(.,'Contact')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "b9537c77-c532-4aa3-b5f3-8d558cb8c591",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "82313699-5bc7-42a2-978a-a6646ed0d770",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/contact"
+    }, {
+      "id": "ce011dc8-062a-4142-9fd3-15ce1bf878ff",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "f8ea1abe-f464-4b5f-850c-645c78342f8c",
@@ -195,6 +300,27 @@
         ["xpath=//div[@id='swiper-wrapper-512d68fdbb43d61e']/div[4]/div[2]/div/div/div/div/div/p[2]/a/span", "xpath:idRelative"],
         ["xpath=//div[4]/div[2]/div/div/div/div/div/p[2]/a/span", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "4e62e118-3ed9-4d70-b5db-3ba5261ddd8b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "f9c9958e-ba21-416b-9bed-a88305bb4fef",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/properties"
+    }, {
+      "id": "8e17aecd-12a4-4d14-8c58-de5bee21b274",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }, {
@@ -228,6 +354,27 @@
         ["xpath=//section[2]/div/div/div/div/div[2]/a", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "e62ed01b-d84c-4a22-88cd-ae8719c37c03",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "2ef42d98-22e8-4537-aec2-8984d59b4abd",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/agents"
+    }, {
+      "id": "8e1c9c1f-bf6a-4b19-8281-b5802882fe6a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "f851939e-65da-41f8-8bf4-c159cfb4c7fb",
@@ -260,6 +407,27 @@
         ["xpath=//div[2]/a", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "d543a30e-1028-47f0-8e88-3218e81733d0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "992145a6-4895-4961-9062-ac6680ab7622",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/properties"
+    }, {
+      "id": "233e1819-75b8-407b-b61b-5539c74b9f2b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "0878fbce-1dae-4b72-b5bd-692f30862c9c",
@@ -290,6 +458,27 @@
         ["xpath=(//a[contains(@href, '/properties')])[22]", "xpath:href"],
         ["xpath=//section[3]/div/div/div/div/div[2]/a", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "55878481-0b7a-4116-a61e-892c0c497593",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "78f7e25a-f202-46a6-a1f4-8083da9ab8fb",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/properties"
+    }, {
+      "id": "e43fc5c9-18a1-4e33-852e-827c095b14e6",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }, {
@@ -322,6 +511,27 @@
         ["xpath=//footer/div/div/div/div[2]/div/a", "xpath:position"],
         ["xpath=//a[contains(.,'Here')]", "xpath:innerText"]
       ],
+      "value": ""
+    }, {
+      "id": "6ea381f7-f7c3-438b-8146-b2b2998c95f6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "e01c762c-1611-455e-9b03-e79a8a8b1f44",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "http://localhost:3000/admin/login"
+    }, {
+      "id": "fdc27d2c-14e1-4b05-ae84-cde6241105b1",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }],
