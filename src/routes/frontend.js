@@ -68,7 +68,7 @@ async function runReport() {
 frontend.get('/', async function (req, res) {
     try {
       const agents = await Agent.find().sort({ _id: -1 }).limit(3).lean();
-        const soldProperty = await Property.find({ status: "Sold" }).limit(4).lean();
+        const soldProperty = await Property.find({ status: "Sold" }).sort({ _id: -1 }).limit(4).lean();
         const latestProperty = await Property.find({ status: { $ne: "Sold" } }).sort({ dateCreated: -1 }).limit(4).lean();
         const rentBanner= await Property.find({ status: "Rent" }).sort({ dateCreated: -1 }).limit(2).lean();
         res.render('user-home', {agents, soldProperty, latestProperty, rentBanner});
