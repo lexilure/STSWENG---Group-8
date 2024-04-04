@@ -3,7 +3,7 @@ name: Main Workflow
 on:
   pull_request:
   push:
-    branches: [ "main" ]
+    branches: [ "backend-test" ]
 
 jobs:
   build:
@@ -29,6 +29,9 @@ jobs:
 
       - name: Run Tests
         run: npm test
+
+      - name: Curl
+        run: curl http://localhost:3000 
 
       - name: Deploy to Render
         if: success() && github.ref == 'refs/heads/main' 
