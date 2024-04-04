@@ -1,0 +1,35 @@
+name: Main Workflow
+
+on:
+  pull_request:
+  push:
+    branches: [ "backend-test" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '21.x'
+
+      - name: Install Supertest
+        run: npm install supertest 
+      
+      - name: Install Jest
+        run: npm install jest
+
+      - name: Install Continuous Integration Environments     
+        run: npm ci
+          
+      - name: Run Tests
+        run: npm test
+        
+      - name: Deploy to Render
+        if: success() && github.ref == 'refs/heads/main' 
+        run: curl -X POST https://api.render.com/deploy/srv-co19ku8l6cac73cqdnkg?key=Ac4g_NCprMc
