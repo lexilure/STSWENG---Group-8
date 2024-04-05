@@ -10,7 +10,7 @@ const upload = multer({ storage: multer.memoryStorage() });
 agent.get('/', sessionChecker, async function (req, res) {
     try {
 
-        const agents = await Agent.find().lean();
+        const agents = await Agent.find({}, { name: 1, email: 1 }).lean();
 
         res.render('admin-agents', { agents });
     } catch (error) {

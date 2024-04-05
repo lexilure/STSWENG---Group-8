@@ -68,9 +68,9 @@ async function runReport() {
 frontend.get('/', async function (req, res) {
     try {
       const agents = await Agent.find().sort({ _id: -1 }).limit(3).lean();
-        const soldProperty = await Property.find({ status: "Sold" }).sort({ _id: -1 }).limit(4).lean();
-        const latestProperty = await Property.find({ status: { $ne: "Sold" } }).sort({ dateCreated: -1 }).limit(4).lean();
-        const rentBanner= await Property.find({ status: "Rent" }).sort({ dateCreated: -1 }).limit(2).lean();
+      const soldProperty = await Property.find({ status: "Sold" }, { name: 1, address: 1, lotsize: 1, floorsize: 1, floornum: 1, roomnum: 1, image: 1 }).sort({ _id: -1 }).limit(4).lean();
+      const latestProperty = await Property.find({ status: { $ne: "Sold" } }, { name: 1, address: 1, image: 1 }).sort({ dateCreated: -1 }).limit(4).lean();
+      const rentBanner = await Property.find({ status: "Rent" }, { name: 1, archipelago: 1, address: 1, lotsize: 1, price: 1, image: 1 }).sort({ dateCreated: -1 }).limit(2).lean();
         res.render('user-home', {agents, soldProperty, latestProperty, rentBanner});
     } catch (error) {
         res.status(500).send('Error fetching data from the database.');
@@ -139,9 +139,10 @@ frontend.post('/contact', (req, res) => {
 
 frontend.get('/properties', async function (req, res) {
     try{
-        const luzon= await Property.find({ archipelago: "Luzon", status: { $ne: "Sold" } }).lean();
-        const visayas= await Property.find({ archipelago: "Visayas", status: { $ne: "Sold" }  }).lean();
-        const mindanao= await Property.find({ archipelago: "Mindanao", status: { $ne: "Sold" }  }).lean();
+        const luzon = await Property.find({ archipelago: "Luzon", status: { $ne: "Sold" } }, { name: 1, status: 1, image: 1 }).lean();
+        const visayas = await Property.find({ archipelago: "Visayas", status: { $ne: "Sold" } }, { name: 1, status: 1, image: 1 }).lean();
+        const mindanao = await Property.find({ archipelago: "Mindanao", status: { $ne: "Sold" } }, { name: 1, status: 1, image: 1 }).lean();
+
 
         res.render('user-property',{luzon, visayas, mindanao});
     } catch (error) {
