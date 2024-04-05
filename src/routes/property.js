@@ -8,7 +8,7 @@ const upload = multer({ storage: multer.memoryStorage() });
 property.get('/', sessionChecker, async function (req, res) {
     try {
 
-        const properties = await Property.find().lean();
+        const properties = await Property.find({}, { name: 1, address: 1, status: 1 }).lean();
 
         res.render('admin-properties', { properties });
     } catch (error) {
