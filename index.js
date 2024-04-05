@@ -10,9 +10,9 @@ dotenv.config();
 const app = express();
 
 const store = new MongoDBStore({
-  uri: process.env.MONGODB_URI,
-  collection: 'mySessions'
-});
+    uri: process.env.MONGODB_URI,
+    collection: 'mySessions'
+  });
 
 app.use(cookieParser());
 app.use(session({
@@ -25,7 +25,6 @@ app.use(session({
         expires: 600000
     }
 }));
-
 
 // Middleware for parsing JSON and URL-encoded request bodies
 app.use(express.urlencoded({ extended: true }));
