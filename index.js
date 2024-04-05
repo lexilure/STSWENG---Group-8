@@ -2,19 +2,25 @@ const dotenv = require('dotenv');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const connect = require('./src/models/db.js');
-
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const MongoDBStore = require('connect-mongodb-session')(session);
 
 dotenv.config();
 const app = express();
+
+const store = new MongoDBStore({
+    uri: process.env.MONGODB_URI,
+    collection: 'mySessions'
+  });
 
 app.use(cookieParser());
 app.use(session({
     key: 'user_sid',
     secret: 'somerandonstuffs',
-    resave: false,
+    store: store,
     saveUninitialized: false,
+    resave: false,
     cookie: {
         expires: 600000
     }
